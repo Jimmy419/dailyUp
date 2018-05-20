@@ -3,30 +3,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>项目管理系统 by www.nongfuit.com</title>
+    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
     <link href="../Public/css/css.css" rel="stylesheet" type="text/css" />
     <link href="../Public/css/admin.css" rel="stylesheet" type="text/css" />
-    <script src='__PUBLIC__/js/jquery.min.js'></script>
 </head>
-<script>
-$(function() {
-    $('.aclick').toggle(
-        function() {
-            id = this.id;
-            $("#subtree" + id).fadeIn(100);
-        },
-        function() {
-            id = this.id;
-            $("#subtree" + id).fadeOut(100);
-        }
-
-    );
-
-    $(".toggle-parent").click(function(){
-    	$(this).next(".toggle-son").toggle();
-    })
-});
-</script>
-
 <body>
     <table width="198" border="0" cellpadding="0" cellspacing="0" class="left-table01">
         <tr>
@@ -50,156 +31,27 @@ $(function() {
                 <!--  任务管理    -->
                 <div>
                 	<div class="toggle-parent left-table03">
-                		用户管理
+                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                        <i class="fa fa-caret-down" aria-hidden="true"></i>
+                        用户管理
                 	</div>
                 	<ul class="toggle-son">
-	                	<li><a>查看用户</a></li>
-	                	<li><a>修改用户</a></li>
-	                	<li><a>增加用户</a></li>              		
+	                	<li><a href="{:U('User/index')}" target="mainFrame">查看用户</a></li>
+	                	<li><a href="{:U('User/add')}" target="mainFrame">增加用户</a></li>              		
                 	</ul>
                 </div>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
-                    <tr>
-                        <td height="29">
-                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="8%"><img name="img8" id="img8" src="../Public/images/ico04.gif" width="8" height="11" /></td>
-                                    <td width="92%">
-                                        <a href="javascript:" id='1' target="mainFrame" class="left-font03 aclick">用户管理</a></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table id="subtree1" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="<{:U('User/index')}>" target="mainFrame" class="left-font03">查看用户</a></td>
-                    </tr>
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="<{:U('User/add')}>" target="mainFrame" class="left-font03">添加用户</a></td>
-                    </tr>
-                </table>
-                <!--  分类管理    -->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
-                    <tr>
-                        <td height="29">
-                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="8%"><img name="img8" id="img8" src="../Public/images/ico04.gif" width="8" height="11" /></td>
-                                    <td width="92%">
-                                        <a href="javascript:" target="mainFrame" class="left-font03 aclick" id='2'>分类管理</a></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table id="subtree2" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../shopclass/index.php" target="mainFrame" class="left-font03">查看分类</a></td>
-                    </tr>
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../shopclass/add.php" target="mainFrame" class="left-font03">添加分类</a></td>
-                    </tr>
-                </table>
-                <!--  品牌管理    -->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
-                    <tr>
-                        <td height="29">
-                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="8%"><img name="img8" id="img8" src="../Public/images/ico04.gif" width="8" height="11" /></td>
-                                    <td width="92%">
-                                        <a href="javascript:" target="mainFrame" class="left-font03 aclick" id='3'>品牌管理</a></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table id="subtree3" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../brand/index.php" target="mainFrame" class="left-font03">查看品牌</a></td>
-                    </tr>
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../brand/add.php" target="mainFrame" class="left-font03">添加品牌</a></td>
-                    </tr>
-                </table>
-                <!--  商品管理    -->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
-                    <tr>
-                        <td height="29">
-                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="8%"><img name="img8" id="img8" src="../Public/images/ico04.gif" width="8" height="11" /></td>
-                                    <td width="92%">
-                                        <a href="javascript:" target="mainFrame" class="left-font03 aclick" id='4'>商品管理</a></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table id="subtree4" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../shop/index.php" target="mainFrame" class="left-font03">查看商品</a></td>
-                    </tr>
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="<{:U('Shop/add')}>" target="mainFrame" class="left-font03">添加商品</a></td>
-                    </tr>
-                </table>
-                <!--  订单状态管理    -->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
-                    <tr>
-                        <td height="29">
-                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="8%"><img name="img8" id="img8" src="../Public/images/ico04.gif" width="8" height="11" /></td>
-                                    <td width="92%">
-                                        <a href="javascript:" target="mainFrame" class="left-font03 aclick" id='5'>订单状态</a></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table id="subtree5" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../orderstat/index.php" target="mainFrame" class="left-font03">查看订单状态</a></td>
-                    </tr>
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../orderstat/add.php" target="mainFrame" class="left-font03">添加订单状态</a></td>
-                    </tr>
-                </table>
-                <!--  订单管理    -->
-                <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
-                    <tr>
-                        <td height="29">
-                            <table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                <tr>
-                                    <td width="8%"><img name="img8" id="img8" src="../Public/images/ico04.gif" width="8" height="11" /></td>
-                                    <td width="92%">
-                                        <a href="javascript:" target="mainFrame" class="left-font03 aclick" id='6'>订单管理</a></td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                </table>
-                <table id="subtree6" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
-                    <tr>
-                        <td width="9%" height="20"><img id="xiaotu20" src="../Public/images/ico05.gif" width="8" height="12" /></td>
-                        <td width="91%"><a href="../orders/index.php" target="mainFrame" class="left-font03">查看订单</a></td>
-                    </tr>
-                </table>
             </TD>
         </tr>
     </table>
 </body>
-
+<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
+<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
+<script>    
+$(function(){
+    $(".toggle-parent").click(function(){
+        $(this).next(".toggle-son").toggle();
+        $(this).children(".fa").toggle();
+    })
+})
+</script>
 </html>
