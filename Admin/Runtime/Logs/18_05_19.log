@@ -1,0 +1,261 @@
+[ 2018-05-19T12:21:14+08:00 ] 127.0.0.1 /dailyUp/admin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.006012s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.006184s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.028724s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028941s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.013410s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001512s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001233s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001393s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.017776s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001842s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001911s ]
+
+[ 2018-05-19T12:21:14+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/top
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.022173s ]
+INFO: [ route_check ] --END-- [ RunTime:0.022347s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001073s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001197s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014559s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000492s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000498s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000379s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000570s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002117s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000729s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000795s ]
+
+[ 2018-05-19T12:21:14+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/right
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.009905s ]
+INFO: [ route_check ] --END-- [ RunTime:0.010050s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001163s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001245s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046848s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046957s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000960s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001347s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000913s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001093s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004521s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001129s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001197s ]
+
+[ 2018-05-19T12:21:14+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/left
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.009347s ]
+INFO: [ route_check ] --END-- [ RunTime:0.009483s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001647s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001773s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\AppServ\www\dailyUp\Admin\Runtime\Cache\32ab8e8c53f1d3a4ec4914ac5a4844a9.php 第 39 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.049106s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049228s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001212s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001756s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000886s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001066s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005160s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001368s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001450s ]
+
+[ 2018-05-19T20:38:47+08:00 ] 127.0.0.1 /dailyUp/admin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.021932s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.022057s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.038414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.038533s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.018565s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001237s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001252s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.022596s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.012213s ]
+INFO: [ view_end ] --END-- [ RunTime:0.012307s ]
+
+[ 2018-05-19T20:38:47+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/top
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.032262s ]
+INFO: [ route_check ] --END-- [ RunTime:0.032424s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000661s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000735s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.007995s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008101s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000538s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000496s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000410s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000578s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002218s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000781s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000868s ]
+
+[ 2018-05-19T20:38:47+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/left
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002812s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003028s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002137s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002252s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\AppServ\www\dailyUp\Admin\Runtime\Cache\32ab8e8c53f1d3a4ec4914ac5a4844a9.php 第 40 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.034693s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034833s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002208s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001792s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.002357s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001842s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008738s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003120s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003265s ]
+
+[ 2018-05-19T20:38:47+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/right
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.007660s ]
+INFO: [ route_check ] --END-- [ RunTime:0.007795s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001579s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023761s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002370s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001976s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001672s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001759s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.008243s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001604s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001705s ]
+
+[ 2018-05-19T20:39:46+08:00 ] 127.0.0.1 /dailyUp/admin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001486s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017772s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017947s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001060s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000978s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000985s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001100s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004385s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001421s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001543s ]
+
+[ 2018-05-19T20:39:46+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/top
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002022s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002295s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001102s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023476s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023758s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000936s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001031s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000692s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.003026s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006104s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001303s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001470s ]
+
+[ 2018-05-19T20:39:46+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/left
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001704s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001892s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001923s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002202s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\AppServ\www\dailyUp\Admin\Runtime\Cache\32ab8e8c53f1d3a4ec4914ac5a4844a9.php 第 40 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.026621s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026953s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001026s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000724s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000545s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000817s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003510s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001044s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001166s ]
+
+[ 2018-05-19T20:39:47+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/right
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002818s ]
+INFO: [ route_check ] --END-- [ RunTime:0.003072s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001831s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002166s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023897s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024081s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002427s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001281s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000946s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002292s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007431s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.002394s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002544s ]
+

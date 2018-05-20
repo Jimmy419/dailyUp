@@ -1,0 +1,10 @@
+.tmp/
+coverage/
+dist/
+node_modules/
+bower_components/
+*.war
+.idea/
+release/0.0.0/
+srilinks.txt
+package-lock.json
