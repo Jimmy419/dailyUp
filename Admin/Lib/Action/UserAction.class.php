@@ -2,10 +2,15 @@
 // 本类由系统自动生成，仅供测试用途
 class UserAction extends Action {
     public function index(){
+        import('ORG.Util.Page');
         $user = M('user');
-        $this->rows=$user->order('id')->select();
+        $count=$user->count();
+        $page=new Page($count,2);
+        $this->show=$page->show();
+        $this->rows=$user->limit($page->firstRow,$page->listRows)->order('id')->select();
         // echo $user->getLastSql();
         $this->display();
+
     }
 
     public function add(){

@@ -27,9 +27,9 @@
                             <td class="text-center"><a href="<?php echo U('edit');?>/id/<?php echo ($row[id]); ?>">Edit</a></td>
                             <td class="text-center"><a href="<?php echo U('delete');?>/id/<?php echo ($row[id]); ?>">Delete</a></td>
                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-
                 </tbody>
             </table>
+            <?php echo ($show); ?>
         </div>
     </div>
 </body>

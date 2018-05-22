@@ -1,0 +1,1084 @@
+[ 2018-05-22T21:30:54+08:00 ] 127.0.0.1 /dailyUp/admin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001757s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001913s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.022188s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022342s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002575s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001949s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001186s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007430s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001386s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001492s ]
+
+[ 2018-05-22T21:30:54+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/top
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.037761s ]
+INFO: [ route_check ] --END-- [ RunTime:0.037900s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001337s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014929s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015074s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000878s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000769s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000561s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000884s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003389s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001105s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001214s ]
+
+[ 2018-05-22T21:30:54+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/left
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.032778s ]
+INFO: [ route_check ] --END-- [ RunTime:0.032921s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.013126s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.013369s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\AppServ\www\dailyUp\Admin\Runtime\Cache\32ab8e8c53f1d3a4ec4914ac5a4844a9.php 第 21 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021998s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022099s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001419s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001227s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000857s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001119s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004833s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001194s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001262s ]
+
+[ 2018-05-22T21:30:54+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/right
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001508s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001622s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001226s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.017080s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017223s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001908s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001231s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000907s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001051s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005392s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001169s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001244s ]
+
+[ 2018-05-22T21:30:57+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001134s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001247s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037856s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037989s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000647s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000602s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000498s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000728s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002705s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000930s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001007s ]
+
+[ 2018-05-22T21:31:08+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/insert
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001678s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001784s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001262s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001343s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.135743s ]
+SQL: INSERT INTO `user` (`name`,`password`) VALUES ('Lucy','e10adc3949ba59abbe56e057f20f883e') [ RunTime:0.047224s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.119498s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.119667s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001143s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001423s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001130s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001087s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005110s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001206s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001275s ]
+
+[ 2018-05-22T21:31:09+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001734s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001900s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001216s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002913s ]
+SQL: SELECT * FROM `user` ORDER BY id  [ RunTime:0.005654s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.030399s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030498s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000549s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000543s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000397s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000568s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002239s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000699s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000765s ]
+
+[ 2018-05-22T21:31:13+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000970s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001066s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009118s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009219s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000565s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000551s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000416s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002316s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000717s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000782s ]
+
+[ 2018-05-22T21:31:35+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/insert
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001463s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001595s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001088s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001162s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002954s ]
+SQL: INSERT INTO `user` (`name`,`password`) VALUES ('suifeng','03cef8d499969183fe7ea25e05f13209') [ RunTime:0.001026s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.016305s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016420s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000941s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000927s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000863s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000976s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003895s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001128s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001196s ]
+
+[ 2018-05-22T21:31:36+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001984s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002161s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001524s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001733s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.004162s ]
+SQL: SELECT * FROM `user` ORDER BY id  [ RunTime:0.000919s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013024s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013135s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000609s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000580s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000424s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000571s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002386s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000768s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000835s ]
+
+[ 2018-05-22T21:31:38+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001049s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001161s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009323s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009440s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000586s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000582s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000407s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000617s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002405s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000753s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000827s ]
+
+[ 2018-05-22T21:31:43+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/insert
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000915s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001011s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000635s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000708s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002882s ]
+SQL: INSERT INTO `user` (`name`,`password`) VALUES ('asdfasdf','92251e8665e19be62c86ff039528e16e') [ RunTime:0.001070s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009253s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009611s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000543s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000528s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000396s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002233s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000713s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000781s ]
+
+[ 2018-05-22T21:31:45+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001055s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001175s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000833s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002997s ]
+SQL: SELECT * FROM `user` ORDER BY id  [ RunTime:0.001201s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011222s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011318s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000587s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000575s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000421s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000621s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002403s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000740s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000805s ]
+
+[ 2018-05-22T21:37:03+08:00 ] 127.0.0.1 /dailyUp/admin.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001671s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001898s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013706s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013893s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001253s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001218s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001086s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001081s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005046s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001283s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001359s ]
+
+[ 2018-05-22T21:37:03+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/top
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001856s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001993s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000782s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009344s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009446s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000493s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000563s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000574s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002198s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000760s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000848s ]
+
+[ 2018-05-22T21:37:03+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/left
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001416s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001527s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002925s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  username C:\AppServ\www\dailyUp\Admin\Runtime\Cache\32ab8e8c53f1d3a4ec4914ac5a4844a9.php 第 21 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012721s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012854s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001109s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001228s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001497s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006014s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.003105s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003407s ]
+
+[ 2018-05-22T21:37:04+08:00 ] 127.0.0.1 /dailyUp/admin.php/Index/right
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002262s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002426s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001759s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001918s ]
+NOTIC: [8] Constant THEME_NAME already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.023733s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023860s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001164s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001131s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000907s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001005s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004487s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001148s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001220s ]
+
+[ 2018-05-22T21:37:06+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000921s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001021s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003600s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.035538s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 0,2   [ RunTime:0.000570s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011402s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011513s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000589s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000494s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002228s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000727s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2018-05-22T21:37:10+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000944s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001040s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000716s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002826s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001136s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 2,2   [ RunTime:0.000279s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010535s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010629s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000509s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000491s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000384s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002126s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000692s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000760s ]
+
+[ 2018-05-22T21:37:12+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001800s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001972s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001179s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001313s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001294s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 4,2   [ RunTime:0.000284s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010580s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010674s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000542s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000521s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000421s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000595s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002263s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000709s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000775s ]
+
+[ 2018-05-22T21:37:14+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001862s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002034s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001396s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003394s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001068s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 2,2   [ RunTime:0.000312s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.012053s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012148s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000571s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000521s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000431s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000576s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002288s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000713s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2018-05-22T21:37:15+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/1
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001068s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001181s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000685s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000766s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.004448s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.000863s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 0,2   [ RunTime:0.000429s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014505s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014657s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000782s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000778s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000570s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000914s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003376s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001107s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001229s ]
+
+[ 2018-05-22T21:37:17+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001016s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001132s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000731s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000814s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003782s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001087s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 2,2   [ RunTime:0.000323s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014474s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014612s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000711s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000542s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000413s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000585s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002465s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000754s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000819s ]
+
+[ 2018-05-22T21:41:37+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001417s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001524s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001148s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001239s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.005904s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.003323s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 4,2   [ RunTime:0.000483s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014110s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014217s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001032s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000979s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000885s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001016s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004115s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001154s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001222s ]
+
+[ 2018-05-22T21:41:49+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001516s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001630s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001639s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003299s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001859s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 0,2   [ RunTime:0.000471s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014648s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014742s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000978s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000968s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000816s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001029s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003982s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001216s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001295s ]
+
+[ 2018-05-22T21:42:45+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001743s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001906s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001317s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001451s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010131s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010279s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000558s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000533s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000416s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000677s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002375s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000740s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000810s ]
+
+[ 2018-05-22T21:43:00+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/insert
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000982s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001086s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000766s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000846s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003077s ]
+SQL: INSERT INTO `user` (`name`,`password`) VALUES ('test','098f6bcd4621d373cade4e832627b4f6') [ RunTime:0.001497s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.009888s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010006s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000503s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000491s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000383s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000543s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002099s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000716s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000798s ]
+
+[ 2018-05-22T21:43:01+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000993s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001095s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000653s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002780s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001160s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 0,2   [ RunTime:0.000272s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010829s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010920s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000508s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000546s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000573s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002192s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000699s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000763s ]
+
+[ 2018-05-22T21:43:05+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001242s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001389s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000697s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000778s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003624s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001636s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 2,2   [ RunTime:0.000330s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011677s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011777s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000544s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000500s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000382s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000554s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002160s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000689s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000754s ]
+
+[ 2018-05-22T21:43:06+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001813s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002011s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001398s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003704s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001445s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 4,2   [ RunTime:0.000385s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013927s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014041s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000590s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000509s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000381s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002225s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000693s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2018-05-22T21:43:08+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000934s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001026s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000699s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000774s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010304s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010454s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000889s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000605s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000531s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000809s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003157s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001022s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001150s ]
+
+[ 2018-05-22T21:43:13+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/insert
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001967s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002137s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001295s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002908s ]
+SQL: INSERT INTO `user` (`name`,`password`) VALUES ('test','098f6bcd4621d373cade4e832627b4f6') [ RunTime:0.001026s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.008935s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009046s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000510s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000498s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000380s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000547s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002115s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000709s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000773s ]
+
+[ 2018-05-22T21:43:14+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001506s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001655s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001158s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 0,2   [ RunTime:0.000275s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011084s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011200s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000513s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000486s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000372s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000545s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002091s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000677s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2018-05-22T21:43:16+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/2
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001736s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001896s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001192s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001321s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003022s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001349s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 2,2   [ RunTime:0.000317s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.011384s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011483s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000556s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000522s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000415s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000584s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002274s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000732s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2018-05-22T21:43:17+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/3
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000944s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001047s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000634s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000707s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.002858s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001588s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 4,2   [ RunTime:0.000395s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013788s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000548s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000512s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000382s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000557s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002186s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000688s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000753s ]
+
+[ 2018-05-22T21:43:18+08:00 ] 127.0.0.1 /dailyUp/admin.php/User/index/p/4
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001652s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001814s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001485s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.003163s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `user` LIMIT 1   [ RunTime:0.001064s ]
+SQL: SELECT * FROM `user` ORDER BY id LIMIT 6,2   [ RunTime:0.000291s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 25 行.
+NOTIC: [8] Use of undefined constant name - assumed 'name' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 26 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 27 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' C:\AppServ\www\dailyUp\Admin\Runtime\Cache\d21dfc824bea5bd7b4a7300e628768b9.php 第 28 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.010913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011008s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000582s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000531s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000415s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000623s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002342s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000752s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000820s ]
+
+[ 2018-05-22T21:48:56+08:00 ] 127.0.0.1 /dailyUp/admin.php/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002743s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002931s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001174s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001265s ]
+ERR: 无法加载模块:login
+
+[ 2018-05-22T21:50:20+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001698s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001817s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001168s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001258s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013412s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013526s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000968s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000936s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000810s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001088s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004011s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001203s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001286s ]
+
+[ 2018-05-22T21:50:21+08:00 ] 127.0.0.1 /dailyUp/admin.php/%3C/dailyUp/admin.php/Login/verify%3E
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002144s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002273s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001195s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001302s ]
+NOTIC: [8] Undefined variable: group C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:
+
+[ 2018-05-22T21:55:57+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001627s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001765s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001394s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001499s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.014417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014525s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001026s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000952s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000809s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000988s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003962s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001200s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001292s ]
+
+[ 2018-05-22T21:55:57+08:00 ] 127.0.0.1 /dailyUp/admin.php/%3C/dailyUp/admin.php/Login/verify%3E
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001740s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001887s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000952s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001062s ]
+NOTIC: [8] Undefined variable: group C:\AppServ\www\dailyUp\ThinkPHP\Lib\Core\App.class.php 第 95 行.
+ERR: 无法加载模块:
+
+[ 2018-05-22T22:48:21+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001468s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001585s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001227s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001315s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013608s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001173s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001036s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001020s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001068s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004536s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001956s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002072s ]
+
+[ 2018-05-22T22:48:21+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login/verify
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001846s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002033s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001165s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+
+[ 2018-05-22T22:54:59+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002486s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002634s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001298s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.013033s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013158s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001019s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001020s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000831s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004067s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001190s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001260s ]
+
+[ 2018-05-22T22:54:59+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login/verify
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001475s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001700s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000917s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001042s ]
+
+[ 2018-05-22T22:55:06+08:00 ] 127.0.0.1 /dailyUp/admin.php/Login/check
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001799s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002010s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001226s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001308s ]
+
