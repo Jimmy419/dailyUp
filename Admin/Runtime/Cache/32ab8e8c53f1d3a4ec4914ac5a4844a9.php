@@ -22,7 +22,7 @@
                                 </tr>
                                 <tr>
                                     <td height="22" class="left-font01">
-                                        [&nbsp;<a href="<<?php echo U('Login/logout');?>>" target="_top" class="left-font01">退出</a>&nbsp;]</td>
+                                        [&nbsp;<a href="<?php echo U('Login/logout');?>" target="_top" class="left-font01">退出</a>&nbsp;]</td>
                                 </tr>
                             </table>
                         </td>

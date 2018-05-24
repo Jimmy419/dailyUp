@@ -1,6 +1,6 @@
 <?php
 // 本类由系统自动生成，仅供测试用途
-class UserAction extends Action {
+class UserAction extends CommonAction {
     public function index(){
         import('ORG.Util.Page');
         $user = M('user');

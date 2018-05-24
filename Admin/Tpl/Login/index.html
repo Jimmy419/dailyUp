@@ -44,7 +44,7 @@ body {
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
           <tr>
             <td width="31%" height="35" class="login-text02">用 户：<br /></td>
-            <td width="69%"><input name="username" type="text" size="30" /></td>
+            <td width="69%"><input name="name" type="text" size="30" /></td>
           </tr>
           <tr>
             <td height="35" class="login-text02">密 码：<br /></td>
@@ -52,7 +52,7 @@ body {
           </tr>
           <tr>
             <td class='login-text02'>验证码图片:</td> 
-            <td><img src="{:U('verify')}" style='cursor:pointer'/></td>
+            <td><img src="{:U('verify')}" style='cursor:pointer' onclick='this.src="{:U('verify')}/"+Math.random()' /></td>
             <!-- <img src="{:U('verify')}" onclick='this.src="{:U('verify')}/random/"+Math.random()' style='cursor:pointer'/> -->
           </tr>
           <tr>
