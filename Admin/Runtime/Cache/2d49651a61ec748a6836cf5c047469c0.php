@@ -14,12 +14,12 @@
             <h3>修改用户</h3>
         </div>
         <div class="panel-body">
-            <form action="<?php echo U('update');?>" method='post'>
+            <form id="updateForm" onsubmit="return false" action="##" method="post">
                 <label class="form-label">Username</label>
-                <input class="form-control" name="name" value="<?php echo ($row[name]); ?>" />
+                <input class="form-control" id="name" name="name" value="<?php echo ($row[name]); ?>" />
                 <label class="form-label">Password</label>
-                <input class="form-control" name="password" type="password" />
-                <input type="hidden" name="id" value="<?php echo ($row[id]); ?>">
+                <input class="form-control" name="password" id="pass" type="password" />
+                <input type="hidden" name="id" id="id" value="<?php echo ($row[id]); ?>">
                 <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
             </form>
         </div>
@@ -29,7 +29,25 @@
 <script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
 <script>
     $(function() {
-
+        $("#updateForm").submit(function(e){
+            $.ajax({
+                url:"<?php echo U('update');?>",
+                type:'POST',
+                data:{'name': $("#name").val(),'password':$('#pass').val(),'id':$('#id').val()},
+                success:function(result){
+                    console.log(result);
+                    // var rst = JSON.parse(result);
+                    var obj = JSON.parse(result);
+                    console.log(obj);
+                    if(obj.code){
+                        alert(obj.errMsg);
+                    }else{
+                        alert("Update successfully!");
+                        window.location.href="<?php echo U('index');?>"; 
+                    }
+                }
+            })
+        });
     });
 </script>
 </html>

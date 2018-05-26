@@ -10,7 +10,13 @@ class UserAction extends CommonAction {
         $this->rows=$user->limit($page->firstRow,$page->listRows)->order('id')->select();
         // echo $user->getLastSql();
         $this->display();
-
+        // $_POST['username']='user5';
+        // $_POST['word']='455';
+        // $user=D('user');
+        // $user->create();
+        // echo "<pre>";
+        // print_r($user);
+        // echo "</pre>";
     }
 
     public function add(){
@@ -34,11 +40,26 @@ class UserAction extends CommonAction {
     }
     
     public function update(){
-        $user=M('user');
-        $user->create();
-        $user->password=md5($_POST['password']);
-        if($user->save()){
-            $this->success('修改成功', U('index'));
+        $user=D('user');
+        if($user->create()){
+            $user->password=md5($_POST['password']);
+            echo $user->password;
+            if($user->save()){
+                // echo $user->getLastSql();
+                // $this->success('修改成功', U('index'));
+                $rst=array('code' => 0, 'errMsg' => 'Update successfully!');
+                echo json_encode($rst);                
+            }else{
+                $err=array('code' => 1, 'errMsg' => "Update failed!");
+                echo json_encode($err);
+            }
+        }else{
+            // echo "<pre>";
+            // print_r($user->getError());
+            // echo "</pre>";
+            // echo $user->getLastSql();
+            $err=array('code' => 1, 'errMsg' => current($user->getError()));
+            echo json_encode($err);
         }
     }
 
@@ -50,3 +71,4 @@ class UserAction extends CommonAction {
         }
     }
 }
+
