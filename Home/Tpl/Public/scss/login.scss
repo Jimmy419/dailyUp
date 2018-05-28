@@ -1,0 +1,17 @@
+.loginPage{
+	position: fixed;
+	left:0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+
+	.login_container {
+		position: absolute;
+		left: 50%;
+		top: 10%;
+		transform: translate(-50%, 0);
+		padding: 10px;
+		box-shadow: 0px 0px 5px #888888;
+	}
+}

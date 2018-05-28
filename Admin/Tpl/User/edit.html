@@ -35,12 +35,13 @@
                 type:'POST',
                 data:{'name': $("#name").val(),'password':$('#pass').val(),'id':$('#id').val()},
                 success:function(result){
-                    console.log(result);
-                    // var rst = JSON.parse(result);
+                    // console.log(result);
+
                     var obj = JSON.parse(result);
                     console.log(obj);
                     if(obj.code){
                         alert(obj.errMsg);
+                        console.log(obj.sql);
                     }else{
                         alert("Update successfully!");
                         window.location.href="{:U('index')}"; 

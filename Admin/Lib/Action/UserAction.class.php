@@ -43,14 +43,15 @@ class UserAction extends CommonAction {
         $user=D('user');
         if($user->create()){
             $user->password=md5($_POST['password']);
-            echo $user->password;
-            if($user->save()){
-                // echo $user->getLastSql();
-                // $this->success('修改成功', U('index'));
-                $rst=array('code' => 0, 'errMsg' => 'Update successfully!');
+            // echo $user->password;
+            // $user->save();
+            if($rst = $user->save()){
+                $sql= $user->getLastSql();
+                $rst=array('code' => 0, 'errMsg' => 'Update successfully!', 'sql' => $sql);
                 echo json_encode($rst);                
             }else{
-                $err=array('code' => 1, 'errMsg' => "Update failed!");
+                $sql= $user->getLastSql();
+                $err=array('code' => 1, 'errMsg' => "Update failed!", 'sql' => $sql);
                 echo json_encode($err);
             }
         }else{

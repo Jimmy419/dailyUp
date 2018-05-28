@@ -2,8 +2,63 @@
 <html>
 <head>
 	<title>asdf</title>
+    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
+    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
-asdfasdfasdfasdWo
+<body class="indexPage">
+	<div class="header">
+		<div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
+	</div>
+	<div class="content">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<th>name</th>
+				<th>subname</th>
+				<th>Need calculation</th>
+			</thead>
+			<tbody>
+	            <volist name='rows' id="row">
+	                <tr>
+	                    <td>{$row[name]}</td>
+	                    <td>{$row[subname]}</td>
+	                    <td>{$row[calc]}</td>
+	                </tr>
+	            </volist>
+			</tbody>
+		</table>
+	</div>
 </body>
+<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
+<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
+<script>
+    $(function() {
+        // $.ajax({
+        //     url:"{:U('index')}/id/{$Think.session.uid}",
+        //     type:'get',
+        //     success:function(result){
+        //         if(result.status){
+        //             // window.location.href="{:U('Login/index')}"; 
+
+        //         }else{
+        //             alert("Get data failed!");
+        //         }
+        //     }
+        // })     	
+
+    	$("#logoutLink").click(function(){
+            $.ajax({
+                url:"{:U('Login/logout')}",
+                type:'get',
+                success:function(result){
+                    if(result.status){
+                        window.location.href="{:U('Login/index')}"; 
+                    }else{
+                        alert("Logout failed!");
+                    }
+                }
+            })      		
+    	})
+    });
+</script>
 </html>
