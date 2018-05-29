@@ -11,41 +11,67 @@
 		<div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
 	</div>
 	<div class="content">
-		<table class="table table-bordered table-hover">
-			<thead>
-				<th>name</th>
-				<th>subname</th>
-				<th>Need calculation</th>
-			</thead>
-			<tbody>
-	            <volist name='rows' id="row">
-	                <tr>
-	                    <td>{$row[name]}</td>
-	                    <td>{$row[subname]}</td>
-	                    <td>{$row[calc]}</td>
-	                </tr>
-	            </volist>
-			</tbody>
-		</table>
+        <div>我的分类</div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th>id</th>
+                <th>class</th>
+                <th>Column Name</th>
+            </thead>
+            <tbody>
+                <volist name='colums' id="col">
+                    <tr>
+                        <td>{$col[id]}</td>
+                        <td>{$col[mclass]}</td>
+                        <td>{$col[name]}</td>
+                    </tr>
+                </volist>
+            </tbody>
+        </table>  
+        <div>我的表格</div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th>id</th>
+                <th>Table Name</th>
+            </thead>
+            <tbody>
+                <volist name='tables' id="table">
+                    <tr>
+                        <td>{$table[id]}</td>
+                        <td>{$table[tablename]}</td>
+                    </tr>
+                </volist>
+            </tbody>
+        </table>
+        <div>我的数据</div>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <th>id</th>
+                <th>column id</th>
+                <th>notes</th>
+                <th>value</th>
+                <th>时间</th>
+                <th>填写时间</th>
+            </thead>
+            <tbody>
+                <volist name='datas' id="data">
+                    <tr>
+                        <td>{$data[id]}</td>
+                        <td>{$data[cid]}</td>
+                        <td>{$data[notes]}</td>
+                        <td>{$data[value]}</td>
+                        <td>{$data[time]}</td>
+                        <td>{$data[ctime]}</td>
+                    </tr>
+                </volist>
+            </tbody>
+        </table>    
 	</div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
 <script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
 <script>
-    $(function() {
-        // $.ajax({
-        //     url:"{:U('index')}/id/{$Think.session.uid}",
-        //     type:'get',
-        //     success:function(result){
-        //         if(result.status){
-        //             // window.location.href="{:U('Login/index')}"; 
-
-        //         }else{
-        //             alert("Get data failed!");
-        //         }
-        //     }
-        // })     	
-
+    $(function() {   	
     	$("#logoutLink").click(function(){
             $.ajax({
                 url:"{:U('Login/logout')}",
