@@ -9,6 +9,7 @@
 <body class="indexPage">
 	<div class="header">
 		<div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
+        <div><a href="{:U('add')}" class="left-font01">添加数据</a></div>
 	</div>
 	<div class="content">
         <div>我的分类</div>
@@ -65,7 +66,9 @@
                     </tr>
                 </volist>
             </tbody>
-        </table>    
+        </table>
+
+
 	</div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>

@@ -15,4 +15,25 @@ class IndexAction extends CommonAction {
 		$this->datas = $data->where('uid='.$_SESSION['uid'])->select();
 		$this->display();
     }
+
+    public function add(){
+    	$cols = M("columns");
+		$this->colums = $cols->where('uid='.$_SESSION['uid'])->select();
+		$this->display();
+    }
+
+    public function insert(){
+        $datasend=M('maindata');
+        $datasend->create();
+        // $data->password=md5($_POST['password']);
+        if($datasend->add()){
+			$data['status']  = 1;
+			$data['errMsg'] = "Data insert successfully!";
+			$this->ajaxReturn($data);
+        }else{
+			$data['status']  = 0;
+			$data['errMsg'] = "Data insert failed!";
+			$this->ajaxReturn($data);        	
+        }
+    }
 }
