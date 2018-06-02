@@ -3,7 +3,7 @@
 class MapAction extends CommonAction {
     public function index(){
     	$cols = M("utbs"); // 实例化User对象
-		$this->tbs = $cols->field('utbs.*,tconf.cid,columns.mclass,columns.name')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
+		$this->tbs = $cols->field('utbs.*,tconf.id as tfid, tconf.cid,columns.mclass,columns.name')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
 		$this->display();
     }
 
@@ -44,9 +44,9 @@ class MapAction extends CommonAction {
     }
     
     public function update(){
-        $utbs=M('utbs');
-        $data['tablename']=$_POST['tablename'];
-        $data['uid']=$_SESSION['uid'];
+        $utbs=M('tconf');
+        $data['cid']=$_POST['cid'];
+        $data['tid']=$_POST['tid'];
         if($rst = $utbs->where($_POST)->find()){
             $this->error('字段已存在！', U('index'));
         }else{
@@ -60,7 +60,7 @@ class MapAction extends CommonAction {
 
     public function delete(){
         $id=$_GET[id];
-        $cols=M('utbs');
+        $cols=M('tconf');
         if($cols->delete($id)){
             $this->success('删除成功', U('index'));
         }else{
