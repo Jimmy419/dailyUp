@@ -3,19 +3,23 @@
 class MapAction extends CommonAction {
     public function index(){
     	$cols = M("utbs"); // 实例化User对象
-		$this->tbs = $utbs->field('utbs.*,tconf.cid,columns.mclass,columns.name')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.id='.$_SESSION['uid'])->select();
+		$this->tbs = $cols->field('utbs.*,tconf.cid,columns.mclass,columns.name')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
 		$this->display();
     }
 
     public function add(){
+        $tbs = M("utbs");
+        $this->tbs = $tbs->where('utbs.uid='.$_SESSION['uid'])->select();
+        $cols = M("columns");
+        $this->cols = $cols->where('columns.uid='.$_SESSION['uid'])->select();
 		$this->display();
     }
 
     public function insert(){
-        $cols=M('utbs');
+        $cols=M('tconf');
         $cols->create();
-        $_POST[uid]=$_SESSION['uid'];
-        $cols->uid=$_SESSION['uid'];
+        // $_POST[uid]=$_SESSION['uid'];
+        // $cols->uid=$_SESSION['uid'];
         if($rst = $cols->where($_POST)->find()){
             // echo $cols->getLastSql();
             $this->error('不能重复插入！', U('index'));
@@ -29,9 +33,13 @@ class MapAction extends CommonAction {
     }     
 
     public function edit(){
-        $cols=M('utbs');
+        $tbs = M("utbs");
+        $this->tbs = $tbs->where('utbs.uid='.$_SESSION['uid'])->select();
+        $cols = M("columns");
+        $this->cols = $cols->where('columns.uid='.$_SESSION['uid'])->select();
+        $cols=M('tconf');
         $id=$_GET[id];
-        $this->col=$cols->find($id);
+        $this->map=$cols->find($id);
         $this->display();
     }
     

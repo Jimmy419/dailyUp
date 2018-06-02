@@ -14,9 +14,18 @@
 	</div>
 	<div class="content">
         <form action="{:U('update')}" method='post'>
-            <label class="form-label">Name</label>
-            <input class="form-control" value="{$col[tablename]}" name="tablename" />
-            <input type="hidden" name="id" value="{$col[id]}">
+            <label class="form-label">Table name</label>
+            <select name="tid" class="form-control">
+                <volist name='tbs' id="tb">
+                    <option value="{$tb[id]}">{$tb[tablename]}</option>
+                </volist>
+            </select>
+            <label class="form-label">Column name</label>
+            <select name="cid" class="form-control">
+                <volist name='cols' id="col">
+                    <option value="{$col[id]}">{$col[name]}({$col[mclass]})</option>
+                </volist>
+            </select>
             <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
         </form>
 	</div>
