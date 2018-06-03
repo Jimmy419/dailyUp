@@ -3,7 +3,7 @@
 class ColumnsAction extends CommonAction {
     public function index(){
     	$cols = M("columns"); // 实例化User对象
-		$this->colums = $cols->where('uid='.$_SESSION['uid'])->select();
+		$this->colums = $cols->where('uid='.$_SESSION['uid'])->order('mclass, id')->select();
 		$this->display();
     }
 

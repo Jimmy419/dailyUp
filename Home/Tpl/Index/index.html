@@ -43,6 +43,7 @@
                 <th>备注</th>
                 <th>时间</th>
                 <th>填写时间</th>
+                <th colspan="2">Setting</th>
             </thead>
             <tbody>
                 <volist name='tables' id="table">
@@ -56,6 +57,8 @@
                         <td>{$table[notes]}</td>
                         <td>{$table[time]}</td>
                         <td>{$table[ctime]}</td>
+                        <td><a href="{:U('edit')}/id/{$table[dataId]}/cid/{$table[cid]}">Edit</a></td>
+                        <td><a href="{:U('delete')}/id/{$table[dataId]}">Delete</a></td>
                     </tr>
                 </volist>
             </tbody>

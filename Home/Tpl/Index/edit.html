@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>asdf</title>
+    <title>asdf</title>
     <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
     <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
     <link href='__PUBLIC__/plugins/datepicker/css/bootstrap-datetimepicker.min.css' rel="stylesheet" type="text/css" />
     <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body class="indexPage">
-	<div class="header">
-		<div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
+    <div class="header">
+        <div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
         <div><a href="{:U('index')}" class="left-font01">主页</a></div>
-	</div>
-	<div class="content">
+    </div>
+    <div class="content">
         <!-- onsubmit="return false" -->
         <form id="addDataForm" onsubmit="return false" action="{:U('insert')}" method="post">
-            <label class="form-label">选择COLUMN</label>
-            <select class="form-control" name="carlist" id="colVal">
+            <label class="form-label">编辑column</label>
+            <div class="form-control">{$column.mclass}-({$column.name})</div>
+            <!-- <select class="form-control" name="carlist" id="colVal">
                 <volist name='colums' id="col">
                     <option value="{$col[id]}">{$col[name]}({$col[mclass]})</option>
                 </volist>
-            </select>
+            </select> -->
             <label class="form-label">值</label>
-            <input class="form-control" type="text" name="value" id="iptVal">
+            <input class="form-control" type="text" name="value" id="iptVal" value="{$currentData.value}">
             <label class="form-label">备注</label>
-            <textarea class="form-control" id="remarks"></textarea>
+            <textarea class="form-control" id="remarks">{$currentData.notes}</textarea>
             <label class="form-label">时间</label>
             <div class="control-group">
-                <div class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                    <input class="form-control" size="16" type="text" value="" readonly>
+                <div class="controls input-append date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="{$time}" readonly>
                     <span class="add-on"><i class="icon-remove"></i></span>
                     <span class="add-on"><i class="icon-th"></i></span>
                 </div>
@@ -36,14 +37,14 @@
             </div>
             <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
         </form>
-	</div>
+    </div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
 <script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
 <script src='__PUBLIC__/plugins/datepicker/js/bootstrap-datetimepicker.min.js'></script>
 <script>
-    $(function() {   	
-    	$("#logoutLink").click(function(){
+    $(function() {      
+        $("#logoutLink").click(function(){
             $.ajax({
                 url:"{:U('Login/logout')}",
                 type:'get',
@@ -54,8 +55,8 @@
                         alert("Logout failed!");
                     }
                 }
-            })      		
-    	})
+            })              
+        })
 
         $('.form_date').datetimepicker({
             language:  'fr',
