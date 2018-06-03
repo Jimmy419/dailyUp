@@ -87,7 +87,7 @@
                 'notes':$('#remarks').val(),
                 'value':$('#iptVal').val(),
                 // 'time':time,
-                'ctime': new Date().getTime()/1000               
+                'ctime': Date.parse(new Date())/1000            
             }
             // console.log(data);
             $.ajax({
