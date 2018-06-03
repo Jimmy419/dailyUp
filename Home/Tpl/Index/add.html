@@ -77,14 +77,14 @@
         }
 
         $("#addDataForm").submit(function(e){
-            var time = new Date($('#dtp_input2').val()).getTime();
+            var time = new Date($('#dtp_input2').val()).getTime()/1000;
             var data = {
                 'uid': {$Think.session.uid},
                 'cid':$('#colVal').val(),
                 'notes':$('#remarks').val(),
                 'value':$('#iptVal').val(),
                 'time':time,
-                'ctime': new Date().getTime()               
+                'ctime': new Date().getTime()/1000             
             }
             console.log(data);
             $.ajax({

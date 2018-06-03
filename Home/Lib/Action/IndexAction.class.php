@@ -56,26 +56,31 @@ class IndexAction extends CommonAction {
 		$this->currentData = $maindata->find($id);
 		$this->time = date('Y-m-d', $this->currentData[time]);
 		$this->display();
+		// var_dump(time('2018-06-03'));
     }
     
     public function update(){
-        $utbs=M('utbs');
-        $data['tablename']=$_POST['tablename'];
-        $data['uid']=$_SESSION['uid'];
-        if($rst = $utbs->where($_POST)->find()){
-            $this->error('字段已存在！', U('index'));
+        $maindata=M('maindata');
+        $datas['notes']=$_POST['notes'];
+        $datas['value']=$_POST['value'];
+        $datas['ctime']=$_POST['ctime'];
+        if($maindata->where('id='.$_POST[id])->save($datas)){
+            // $this->success('更新成功', U('index'));
+            $data['mess'] = $maindata->getLastSql();
+			$data['status']  = 1;
+			$data['errMsg'] = "Data insert successfully!";
+			$this->ajaxReturn($data);
         }else{
-            if($utbs->where('id='.$_POST[id])->save($data)){
-                $this->success('更新成功', U('index'));
-            }else{
-                $this->error('更新失败', U('index'));
-            }
+            $data['mess'] = $maindata->getLastSql();
+			$data['status']  = 0;
+			$data['errMsg'] = "Data insert failed!";
+			$this->ajaxReturn($data);
         }
     }
 
     public function delete(){
         $id=$_GET[id];
-        $cols=M('utbs');
+        $cols=M('maindata');
         if($cols->delete($id)){
             $this->success('删除成功', U('index'));
         }else{
