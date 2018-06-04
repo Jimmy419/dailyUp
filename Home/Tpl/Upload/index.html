@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>asdf</title>
+    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
+    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="indexPage">
+	<div class="header">
+		<div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
+        <div><a href="{:U('Index/index')}" class="left-font01">主页</a></div>
+	</div>
+    <div class="content">
+        <form action="{:U('upload')}" method='post' enctype="multipart/form-data">
+            <label class="form-label">选择COLUMN</label>
+            <select class="form-control" name="carlist" id="colVal">
+                <volist name='colums' id="col">
+                    <option value="{$col[id]}">{$col[name]}({$col[mclass]})</option>
+                </volist>
+            </select>
+            <label class="form-label">上传Excel文件</label>
+            <input type="file" name="file">
+            <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+        </form>
+    </div>
+</body>
+<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
+<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
+<script>
+    $(function() {   	
+    	$("#logoutLink").click(function(){
+            $.ajax({
+                url:"{:U('Login/logout')}",
+                type:'get',
+                success:function(result){
+                    if(result.status){
+                        window.location.href="{:U('Login/index')}"; 
+                    }else{
+                        alert("Logout failed!");
+                    }
+                }
+            })      		
+    	})
+    });
+</script>
+</html>
