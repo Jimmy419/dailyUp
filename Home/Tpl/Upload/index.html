@@ -14,7 +14,7 @@
         <div><a href="{:U('Index/index')}" class="left-font01">主页</a></div>
     </div>
     <div class="content">
-        <form action="{:U('upload')}" method='post' enctype="multipart/form-data">
+        <form id="multiDataForm" onsubmit="return false">
             <label class="form-label">选择COLUMN</label>
             <select class="form-control" name="carlist" id="colVal">
                 <volist name='colums' id="col">
@@ -59,27 +59,55 @@ $(function() {
             var workbook = XLSX.read(data, {type: rABS ? 'binary' : 'array'});
 
             /* DO SOMETHING WITH workbook HERE */
-            console.log(workbook.Sheets.Sheet1);
+            console.log(workbook);
             var obj = workbook.Sheets.Sheet1;
+            var reg = /\d+$/;
+            var dataLength = workbook.Sheets.Sheet1['!ref'].match(reg)[0];
             var dataArr = [];
-            for(var p in obj){
-                if(obj[p].t==='n'){
-                    dataArr.push(obj[p].v)
-                }
+            for (var i=1;i<dataLength;i++)
+            {
+                var time1 = obj['A'+(i+1)].v + '';
+                var time1 = time1.replace(/^(\d{4})(\d{2})(\d{2})$/,"$1-$2-$3")
+                var time = Date.parse(new Date(time1))/1000;
+                // time1 = timestampToTime(time1);
+                var ijson = {
+                    'value': obj['B'+(i+1)].v,
+                    'time': time
+                };
+                dataArr.push(ijson);                
             }
-            console.log(dataArr);
-            var dataForPost = [];
-            dataArr.forEach(function(value,index,array){
-                var dataLength = dataArr.length/2;
-                if(index < dataLength - 1){
-                    var 
-                }
-            })
         };
         if(rABS) reader.readAsBinaryString(f); else reader.readAsArrayBuffer(f);
     }
     upFile.addEventListener('change', handleFile, false);
 
+
+
+    $("#multiDataForm").submit(function(e){
+        var data = {
+            'uid': {$Think.session.uid},
+            'cid':$('#colVal').val(),
+            'notes':$('#remarks').val(),
+            'value':$('#iptVal').val(),
+            'time':time,
+            'ctime': Date.parse(new Date())/1000             
+        }
+        console.log(data);
+        $.ajax({
+            url:"{:U('insert')}",
+            type:'post',
+            data:data,
+            success:function(result){
+                // console.log(result);
+                if(result.status){
+                    alert("Insert successfully!")
+                    window.location.href="{:U('index')}"; 
+                }else{
+                    alert(result.errMsg);
+                }
+            }
+        })              
+    });
 });
 </script>
 
