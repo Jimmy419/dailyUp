@@ -6,13 +6,17 @@ class IndexAction extends CommonAction {
 		$this->colums = $cols->where('uid='.$_SESSION['uid'])->select(); 
 		
 		$utbs = M("utbs");
-		$this->tables = $utbs->field('utbs.*,tconf.cid,columns.mclass,columns.name,maindata.value,maindata.id as dataId,maindata.notes,maindata.time,maindata.ctime')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id','LEFT JOIN maindata ON columns.id = maindata.cid'))->where('utbs.uid='.$_SESSION['uid'])->select();
-		// echo $utbs->getLastSql();
-		// echo "<pre>";
-		// print_r($this->tables);
-		// echo "</pre>";
-		$data = M("maindata");
-		$this->datas = $data->where('uid='.$_SESSION['uid'])->select();
+		$tables = $utbs->field('utbs.*,tconf.cid,columns.mclass,columns.name,maindata.value,maindata.id as dataId,maindata.notes,maindata.time,maindata.ctime')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id','LEFT JOIN maindata ON columns.id = maindata.cid'))->where('utbs.uid='.$_SESSION['uid'])->order('columns.id,maindata.time')->select();
+        foreach ($tables as $k => $v) {
+            $v[time] = date('Y-m-d', $v[time]);
+            $tables[$k][time] =$v[time];
+        }
+        $this->tables = $tables;
+
+        $this->$tblist = $utbs->where('uid='.$_SESSION['uid'])->select();
+        // echo "<pre>";
+        // print_r($tblist);
+        // echo "</pre>";
 		$this->display();
     }
 

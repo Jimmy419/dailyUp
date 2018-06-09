@@ -48,6 +48,7 @@ $(function() {
         })
     })
 
+    var dataArr = [];
     var upFile = document.getElementById('upfile');
     var rABS = true; // true: readAsBinaryString ; false: readAsArrayBuffer
     function handleFile(e) {
@@ -59,11 +60,10 @@ $(function() {
             var workbook = XLSX.read(data, {type: rABS ? 'binary' : 'array'});
 
             /* DO SOMETHING WITH workbook HERE */
-            console.log(workbook);
+            // console.log(workbook);
             var obj = workbook.Sheets.Sheet1;
             var reg = /\d+$/;
             var dataLength = workbook.Sheets.Sheet1['!ref'].match(reg)[0];
-            var dataArr = [];
             for (var i=1;i<dataLength;i++)
             {
                 var time1 = obj['A'+(i+1)].v + '';
@@ -84,24 +84,24 @@ $(function() {
 
 
     $("#multiDataForm").submit(function(e){
-        var data = {
-            'uid': {$Think.session.uid},
-            'cid':$('#colVal').val(),
-            'notes':$('#remarks').val(),
-            'value':$('#iptVal').val(),
-            'time':time,
-            'ctime': Date.parse(new Date())/1000             
+        dataArr.forEach(function(value){
+            value.uid = {$Think.session.uid};
+            value.cid = $('#colVal').val();
+            value.ctime = Date.parse(new Date())/1000;
+        });
+        var postData = {
+            cid: $('#colVal').val(),
+            data:dataArr
         }
-        console.log(data);
         $.ajax({
-            url:"{:U('insert')}",
+            url:"{:U('upload')}",
             type:'post',
-            data:data,
+            data:postData,
             success:function(result){
                 // console.log(result);
                 if(result.status){
                     alert("Insert successfully!")
-                    window.location.href="{:U('index')}"; 
+                    // window.location.href="{:U('index')}"; 
                 }else{
                     alert(result.errMsg);
                 }

@@ -15,21 +15,6 @@
         <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div>
 	</div>
 	<div class="content">
-        <!-- <div>我的分类</div>
-        <table class="table table-bordered table-hover">
-            <thead>
-                <th>id</th>
-                <th>class</th>
-                <th>Column Name</th>
-            </thead>
-            <tbody>
-                <?php if(is_array($colums)): $i = 0; $__LIST__ = $colums;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$col): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($col[id]); ?></td>
-                        <td><?php echo ($col[mclass]); ?></td>
-                        <td><?php echo ($col[name]); ?></td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-            </tbody>
-        </table>   -->
         <div>我的数据</div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -61,29 +46,6 @@
             </tbody>
         </table>
         <div><a href="<?php echo U('add');?>" class="left-font01">添加数据</a></div>
-        <!-- <div>我的数据</div>
-        <table class="table table-bordered table-hover">
-            <thead>
-                <th>id</th>
-                <th>column id</th>
-                <th>notes</th>
-                <th>value</th>
-                <th>时间</th>
-                <th>填写时间</th>
-            </thead>
-            <tbody>
-                <?php if(is_array($datas)): $i = 0; $__LIST__ = $datas;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$data): $mod = ($i % 2 );++$i;?><tr>
-                        <td><?php echo ($data[id]); ?></td>
-                        <td><?php echo ($data[cid]); ?></td>
-                        <td><?php echo ($data[notes]); ?></td>
-                        <td><?php echo ($data[value]); ?></td>
-                        <td><?php echo ($data[time]); ?></td>
-                        <td><?php echo ($data[ctime]); ?></td>
-                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-            </tbody>
-        </table> -->
-
-
 	</div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>

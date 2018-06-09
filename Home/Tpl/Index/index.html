@@ -15,23 +15,6 @@
         <div><a href="{:U('Upload/index')}">上传数据</a></div>
 	</div>
 	<div class="content">
-        <!-- <div>我的分类</div>
-        <table class="table table-bordered table-hover">
-            <thead>
-                <th>id</th>
-                <th>class</th>
-                <th>Column Name</th>
-            </thead>
-            <tbody>
-                <volist name='colums' id="col">
-                    <tr>
-                        <td>{$col[id]}</td>
-                        <td>{$col[mclass]}</td>
-                        <td>{$col[name]}</td>
-                    </tr>
-                </volist>
-            </tbody>
-        </table>   -->
         <div>我的数据</div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -65,31 +48,6 @@
             </tbody>
         </table>
         <div><a href="{:U('add')}" class="left-font01">添加数据</a></div>
-        <!-- <div>我的数据</div>
-        <table class="table table-bordered table-hover">
-            <thead>
-                <th>id</th>
-                <th>column id</th>
-                <th>notes</th>
-                <th>value</th>
-                <th>时间</th>
-                <th>填写时间</th>
-            </thead>
-            <tbody>
-                <volist name='datas' id="data">
-                    <tr>
-                        <td>{$data[id]}</td>
-                        <td>{$data[cid]}</td>
-                        <td>{$data[notes]}</td>
-                        <td>{$data[value]}</td>
-                        <td>{$data[time]}</td>
-                        <td>{$data[ctime]}</td>
-                    </tr>
-                </volist>
-            </tbody>
-        </table> -->
-
-
 	</div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
@@ -109,6 +67,9 @@
                 }
             })      		
     	})
+
+
+        
     });
 </script>
 </html>
