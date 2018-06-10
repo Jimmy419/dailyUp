@@ -15,6 +15,8 @@
         <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div>
 	</div>
 	<div class="content">
+        <?php if(is_array($tblist)): $i = 0; $__LIST__ = $tblist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tb): $mod = ($i % 2 );++$i;?><div id='chart<?php echo ($tb[id]); ?>'></div><?php endforeach; endif; else: echo "" ;endif; ?>
+        <div id="container"></div>
         <div>我的数据</div>
         <table class="table table-bordered table-hover">
             <thead>
@@ -49,22 +51,130 @@
 	</div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
+<!-- <script src='__PUBLIC__/plugins/highcharts/jquery-1.8.3.min.js'></script> -->
 <script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
+<script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script>
+<!-- <script src='__PUBLIC__/plugins/highcharts/jquery-1.8.3.min.js'></script> -->
+<!-- <script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script> -->
+<script src="https://code.highcharts.com/highcharts.src.js"></script>
+<script src="__PUBLIC__/plugins/highcharts/exporting.js"></script>
+<script src="__PUBLIC__/plugins/highcharts/highcharts-zh_CN.js"></script>
 <script>
-    $(function() {   	
-    	$("#logoutLink").click(function(){
-            $.ajax({
-                url:"<?php echo U('Login/logout');?>",
-                type:'get',
-                success:function(result){
-                    if(result.status){
-                        window.location.href="<?php echo U('Login/index');?>"; 
-                    }else{
-                        alert("Logout failed!");
-                    }
+$(function() {   	
+    var data = null;
+    var tables = null;
+	$("#logoutLink").click(function(){
+        $.ajax({
+            url:"<?php echo U('Login/logout');?>",
+            type:'get',
+            success:function(result){
+                if(result.status){
+                    window.location.href="<?php echo U('Login/index');?>"; 
+                }else{
+                    alert("Logout failed!");
                 }
-            })      		
-    	})
-    });
+            }
+        })      		
+	})
+
+    function fmtDate(obj){
+        var date =  new Date(obj*1000);
+        var y = date.getFullYear();
+        var m = date.getMonth()+1;
+        m = m < 10 ? ('0' + m) : m;  
+        var d = date.getDate();
+        d = d < 10 ? ('0' + d) : d; 
+        return y + '-' + m + '-' + d;
+    }
+
+    Highcharts.dateFormat('%Y-%m-%d');
+    
+    $.ajax({
+        url:"<?php echo U('getDate');?>",
+        type:'get',
+        success:function(result){
+            data = result.data;
+            tables = result.tables;
+            tables.forEach(function(table){
+                var chartData = [];
+                var chartCol = [];
+                var chartColId = [];
+                var series = [];
+                data.forEach(function(val){
+                    if(val.id === table.id) {
+                        chartData.push(val);
+                        chartCol.push(val.name);
+                        chartColId.push(val.cid);
+                    }
+                });
+                chartColName = _.uniq(chartCol);
+                chartColId = _.uniq(chartColId);
+                chartColId.forEach(function(col,colIndex){
+                    var itemData = [];
+                    chartData.forEach(function(itemDataItem){
+                        if(itemDataItem.cid === col){
+                            var temp = [
+                                parseFloat(itemDataItem.time)*1000,
+                                parseFloat(itemDataItem.value)
+                            ];
+                            itemData.push(temp);                            
+                        }
+                    })
+                    var chartItem = {
+                        name: chartColName[colIndex],
+                        data: itemData
+                    }
+                    series.push(chartItem);
+                })
+
+                var chart1 = Highcharts.chart('chart'+table.id, {
+                    chart: {
+                        type: 'spline'
+                    },
+                    title: {
+                        text: table.tablename
+                    },
+                    subtitle: {
+                        text: null
+                    },
+                    xAxis: {
+                        title: {
+                            text: null
+                        },
+                        type: "datetime",
+                        // dateTimeLabelFormats: {
+                        //     day: '%b/%e',
+                        //     month: '%b',
+                        //     // week: '%b/%e',
+                        //     year: '%y',
+                        // },
+                        labels: {
+                                format: '{value: %Y%m%d}'
+                                // align: 'right',
+                                // rotation: -30
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: null
+                        },
+                        min: 0
+                    },
+                    tooltip: {
+                        split: true
+                    },
+                    plotOptions: {
+                        spline: {
+                            marker: {
+                                enabled: true
+                            }
+                        }
+                    },
+                    series: series
+                });
+            })
+        }
+    })    
+});
 </script>
 </html>

@@ -20,10 +20,10 @@ class IndexAction extends CommonAction {
     public function getDate(){
         $utbs = M("utbs");
         $tables = $utbs->field('utbs.*,tconf.cid,columns.mclass,columns.name,maindata.value,maindata.id as dataId,maindata.notes,maindata.time,maindata.ctime')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id','LEFT JOIN maindata ON columns.id = maindata.cid'))->where('utbs.uid='.$_SESSION['uid'])->order('columns.id,maindata.time')->select();
-        foreach ($tables as $k => $v) {
-            $v[time] = date('Y-m-d', $v[time]);
-            $tables[$k][time] =$v[time];
-        }
+        // foreach ($tables as $k => $v) {
+        //     $v[time] = date('Y-m-d', $v[time]);
+        //     $tables[$k][time] =$v[time];
+        // }
         $tblist = $utbs->where('uid='.$_SESSION['uid'])->select();
         $data['tables'] = $tblist;
         $data['data'] = $tables;
