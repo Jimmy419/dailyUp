@@ -16,6 +16,7 @@
 	</div>
 	<div class="content">
         <?php if(is_array($tblist)): $i = 0; $__LIST__ = $tblist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tb): $mod = ($i % 2 );++$i;?><div id='chart<?php echo ($tb[id]); ?>'></div><?php endforeach; endif; else: echo "" ;endif; ?>
+        <div class="for_sub_chart"></div>
         <div id="container"></div>
         <div>我的数据</div>
         <table class="table table-bordered table-hover">
@@ -51,11 +52,8 @@
 	</div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
-<!-- <script src='__PUBLIC__/plugins/highcharts/jquery-1.8.3.min.js'></script> -->
 <script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
 <script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script>
-<!-- <script src='__PUBLIC__/plugins/highcharts/jquery-1.8.3.min.js'></script> -->
-<!-- <script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script> -->
 <script src="https://code.highcharts.com/highcharts.src.js"></script>
 <script src="__PUBLIC__/plugins/highcharts/exporting.js"></script>
 <script src="__PUBLIC__/plugins/highcharts/highcharts-zh_CN.js"></script>
@@ -77,31 +75,21 @@ $(function() {
         })      		
 	})
 
-    function fmtDate(obj){
-        var date =  new Date(obj*1000);
-        var y = date.getFullYear();
-        var m = date.getMonth()+1;
-        m = m < 10 ? ('0' + m) : m;  
-        var d = date.getDate();
-        d = d < 10 ? ('0' + d) : d; 
-        return y + '-' + m + '-' + d;
-    }
-
-    Highcharts.dateFormat('%Y-%m-%d');
-    
     $.ajax({
         url:"<?php echo U('getDate');?>",
         type:'get',
         success:function(result){
             data = result.data;
+            console.log(data);
             tables = result.tables;
+            subCharts(tables,data);
             tables.forEach(function(table){
                 var chartData = [];
                 var chartCol = [];
                 var chartColId = [];
                 var series = [];
                 data.forEach(function(val){
-                    if(val.id === table.id) {
+                    if(val.tid === table.id) {
                         chartData.push(val);
                         chartCol.push(val.name);
                         chartColId.push(val.cid);
@@ -142,16 +130,8 @@ $(function() {
                             text: null
                         },
                         type: "datetime",
-                        // dateTimeLabelFormats: {
-                        //     day: '%b/%e',
-                        //     month: '%b',
-                        //     // week: '%b/%e',
-                        //     year: '%y',
-                        // },
                         labels: {
-                                format: '{value: %Y%m%d}'
-                                // align: 'right',
-                                // rotation: -30
+                            format: '{value: %Y%m%d}'
                         }
                     },
                     yAxis: {
@@ -174,7 +154,133 @@ $(function() {
                 });
             })
         }
-    })    
+    })
+
+    function subCharts(tables,sourcedata){
+        // tables:[{id:4,uid:1,tablename:'Stock'}]
+        // sourcedata:[{cid:"20",ctime:"1528515614",dataId:"974",tid:"4",mclass:"Stock",name:"Stock Value",notes:null,tablename:"Stock",time:"1516147200",uid:"1",value:"35903.5300"}]
+
+        tables.forEach(function(table){
+            var tableSourceData = [];
+            var tableDates = null;
+            var tableColumns = [];
+            var subTableData = [];
+            var subtables = [
+                {
+                    'name':'利润率',
+                    'columns': [
+                        {
+                            "subTbColName": '利润率',
+                            "calculation": '([20] - [21])*100/[21]',
+                            "unit": '%'                            
+                        }
+                    ]                  
+                }
+            ];
+
+            //get table data;
+            sourcedata.forEach(function(sditem){
+                if(sditem.tid === table.id){
+                    tableSourceData.push(sditem);
+                }
+            });
+
+            //get table dates;
+            var tempDates = [];
+            var columnsTemp = [];
+            tableSourceData.forEach(function(sditem){
+                tempDates.push(parseFloat(sditem.time) * 1000);
+                var sditemColumn = {
+                    cid: sditem.cid,
+                    name: sditem.name
+                }
+                columnsTemp.push(sditemColumn);
+            });
+            tableDates = _.uniq(tempDates).sort();
+
+            //get columns;
+            columnsTemp.forEach(function(tempColItem){
+                var foundCol = _.find(tableColumns, function(col){ return col.cid === tempColItem.cid; })
+                if(!foundCol){
+                    tableColumns.push(tempColItem);
+                }
+            });
+
+            //arrange data for subtable
+            tableDates.forEach(function(dateItem){
+                var subTableItem = {
+                    date: dateItem
+                }
+                tableSourceData.forEach(function(sdItem){
+                    if(parseFloat(sdItem.time) * 1000 === dateItem){
+                        subTableItem[sdItem.cid] = sdItem.value;
+                    }
+                });
+                subTableData.push(subTableItem);
+            });
+
+            //calculate sub table data
+            subtables.forEach(function(subtable, subtableIx){
+                subtable.chartData = [];
+                subtable.columns.forEach(function(subCol){
+                    var tempdata = [];
+                    subTableData.forEach(function(subDataItem){
+                        var calc = subCol.calculation.replace(/(\[[0-9]+\])/g,"subDataItem$1");
+                        var calculatedVal = eval(calc);
+                        if(!isNaN(calculatedVal)){
+                            tempdata.push([subDataItem.date, calculatedVal]);
+                        };
+                    })
+                    subtable.chartData.push({
+                        name: subCol.subTbColName,
+                        data: tempdata
+                    })
+                })
+                
+
+                $('.for_sub_chart').append('<div id="subtable'+subtableIx+'"></div>');
+                var chart1 = Highcharts.chart('subtable'+subtableIx, {
+                    chart: {
+                        type: 'spline'
+                    },
+                    title: {
+                        text: subtable.name
+                    },
+                    subtitle: {
+                        text: null
+                    },
+                    xAxis: {
+                        title: {
+                            text: null
+                        },
+                        type: "datetime",
+                        labels: {
+                            format: '{value: %Y%m%d}'
+                        }
+                    },
+                    yAxis: {
+                        title: {
+                            text: null
+                        },
+                        // min: 0
+                    },
+                    tooltip: {
+                        split: true
+                    },
+                    plotOptions: {
+                        spline: {
+                            marker: {
+                                enabled: true
+                            }
+                        }
+                    },
+                    series: subtable.chartData
+                });
+            });
+
+            console.log(subtables);
+        })
+    }    
 });
 </script>
 </html>
