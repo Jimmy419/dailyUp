@@ -83,84 +83,107 @@ $(function() {
         url:"{:U('getDate')}",
         type:'get',
         success:function(result){
-            data = result.data;
-            console.log(data);
-            tables = result.tables;
-            subCharts(tables,data);
-            tables.forEach(function(table){
-                var chartData = [];
-                var chartCol = [];
-                var chartColId = [];
-                var series = [];
-                data.forEach(function(val){
-                    if(val.tid === table.id) {
-                        chartData.push(val);
-                        chartCol.push(val.name);
-                        chartColId.push(val.cid);
-                    }
-                });
-                chartColName = _.uniq(chartCol);
-                chartColId = _.uniq(chartColId);
-                chartColId.forEach(function(col,colIndex){
-                    var itemData = [];
-                    chartData.forEach(function(itemDataItem){
-                        if(itemDataItem.cid === col){
-                            var temp = [
-                                parseFloat(itemDataItem.time)*1000,
-                                parseFloat(itemDataItem.value)
-                            ];
-                            itemData.push(temp);                            
-                        }
-                    })
-                    var chartItem = {
-                        name: chartColName[colIndex],
-                        data: itemData
-                    }
-                    series.push(chartItem);
-                })
-
-                var chart1 = Highcharts.chart('chart'+table.id, {
-                    chart: {
-                        type: 'spline'
-                    },
-                    title: {
-                        text: table.tablename
-                    },
-                    subtitle: {
-                        text: null
-                    },
-                    xAxis: {
-                        title: {
-                            text: null
-                        },
-                        type: "datetime",
-                        labels: {
-                            format: '{value: %Y%m%d}'
-                        }
-                    },
-                    yAxis: {
-                        title: {
-                            text: null
-                        },
-                        min: 0
-                    },
-                    tooltip: {
-                        split: true
-                    },
-                    plotOptions: {
-                        spline: {
-                            marker: {
-                                enabled: true
-                            }
-                        }
-                    },
-                    series: series
-                });
-            })
+            var data = result.data;
+            var tables = result.tables;
+            var subtabs = result.subtables;
+            subCharts(tables,data,subtabs);
+            drawCharts(tables,data);
         }
     })
 
-    function subCharts(tables,sourcedata){
+    function drawCharts(tables,data){
+        tables.forEach(function(table){
+            var chartData = [];
+            var chartCol = [];
+            var chartColId = [];
+            var series = [];
+            data.forEach(function(val){
+                if(val.tid === table.id) {
+                    chartData.push(val);
+                    chartCol.push(val.name);
+                    chartColId.push(val.cid);
+                }
+            });
+            chartColName = _.uniq(chartCol);
+            chartColId = _.uniq(chartColId);
+            chartColId.forEach(function(col,colIndex){
+                var itemData = [];
+                chartData.forEach(function(itemDataItem){
+                    if(itemDataItem.cid === col){
+                        var temp = [
+                            parseFloat(itemDataItem.time)*1000,
+                            parseFloat(itemDataItem.value)
+                        ];
+                        itemData.push(temp);                            
+                    }
+                })
+                var chartItem = {
+                    name: chartColName[colIndex],
+                    data: itemData
+                }
+                series.push(chartItem);
+            })
+
+            var chart1 = Highcharts.chart('chart'+table.id, {
+                chart: {
+                    type: 'spline'
+                },
+                title: {
+                    text: table.tablename
+                },
+                subtitle: {
+                    text: null
+                },
+                xAxis: {
+                    title: {
+                        text: null
+                    },
+                    type: "datetime",
+                    labels: {
+                        format: '{value: %Y%m%d}'
+                    }
+                },
+                yAxis: {
+                    title: {
+                        text: null
+                    },
+                    min: 0
+                },
+                tooltip: {
+                    split: true
+                },
+                plotOptions: {
+                    spline: {
+                        marker: {
+                            enabled: true
+                        }
+                    }
+                },
+                series: series
+            });
+        })
+    }
+
+    function clarrifySubCols(table,subtables){
+        var tempSubTbs = _.filter(subtables, function(num){ return num.tid == table.id; });
+        var sbtbnames = _.uniq(_.pluck(tempSubTbs, 'name'));
+        var finalsubtables = [];
+        sbtbnames.forEach(function(sbtbname){
+            var subtableItem = {
+                'name': sbtbname,
+                'columns': []
+            }
+            tempSubTbs.forEach(function(subtable){
+                if(subtable.name === sbtbname){
+                    subtableItem.columns.push(subtable)
+                }
+            });
+            finalsubtables.push(subtableItem);
+        });
+        return finalsubtables;
+    }
+
+    function subCharts(tables,sourcedata,subtabs){
         // tables:[{id:4,uid:1,tablename:'Stock'}]
         // sourcedata:[{cid:"20",ctime:"1528515614",dataId:"974",tid:"4",mclass:"Stock",name:"Stock Value",notes:null,tablename:"Stock",time:"1516147200",uid:"1",value:"35903.5300"}]
 
@@ -169,18 +192,7 @@ $(function() {
             var tableDates = null;
             var tableColumns = [];
             var subTableData = [];
-            var subtables = [
-                {
-                    'name':'利润率',
-                    'columns': [
-                        {
-                            "subTbColName": '利润率',
-                            "calculation": '([20] - [21])*100/[21]',
-                            "unit": '%'                            
-                        }
-                    ]                  
-                }
-            ];
+            var subtables = clarrifySubCols(table,subtabs);
 
             //get table data;
             sourcedata.forEach(function(sditem){
@@ -265,8 +277,7 @@ $(function() {
                     yAxis: {
                         title: {
                             text: null
-                        },
-                        // min: 0
+                        }
                     },
                     tooltip: {
                         split: true
@@ -281,8 +292,6 @@ $(function() {
                     series: subtable.chartData
                 });
             });
-
-            console.log(subtables);
         })
     }    
 });

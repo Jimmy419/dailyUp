@@ -21,8 +21,10 @@ class IndexAction extends CommonAction {
         $utbs = M("utbs");
         $tables = $utbs->field('utbs.id as tid,utbs.uid,utbs.tablename,tconf.cid,columns.mclass,columns.name,maindata.value,maindata.id as dataId,maindata.notes,maindata.time,maindata.ctime')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id','LEFT JOIN maindata ON columns.id = maindata.cid'))->where('utbs.uid='.$_SESSION['uid'])->order('columns.id,maindata.time')->select();
         $tblist = $utbs->where('uid='.$_SESSION['uid'])->select();
+        $subtables = $utbs->field('utbs.id as tid,subtbs.name,stbcols.subtbcolname,stbcols.calculation,stbcols.unit')->join(array('LEFT JOIN subtbs ON utbs.id = subtbs.tid','LEFT JOIN stbcols ON stbcols.stid = subtbs.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
         $data['tables'] = $tblist;
         $data['data'] = $tables;
+        $data['subtables'] = $subtables;
         $data['status']  = 1;
         $this->ajaxReturn($data);  
     }
