@@ -8,17 +8,21 @@ gulp.task('sassAdmin', function () {
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./Admin/Tpl/Public/css/'));
 });
- 
-gulp.task('sassAdmin:watch', function () {
-  gulp.watch('./Admin/Tpl/Public/scss/*.scss', ['sassAdmin']);
-});
 
 gulp.task('sass', function () {
   return gulp.src('./Home/Tpl/Public/scss/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./Home/Tpl/Public/css/'));
 });
- 
-gulp.task('sass:watch', function () {
-  gulp.watch('./Home/Tpl/Public/scss/*.scss', ['sass']);
+
+gulp.task('commonsass', function () {
+  return gulp.src('./Public/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('./Public/css/'));
+});
+
+gulp.task('watch', ['commonsass','sass','sassAdmin'], function(){
+	gulp.watch(['./Home/Tpl/Public/scss/*.scss'], ['sass']);
+	gulp.watch(['./Admin/Tpl/Public/scss/*.scss'], ['sassAdmin']);
+	gulp.watch(['./Public/sass/**/*.scss'], ['commonsass']);
 });
