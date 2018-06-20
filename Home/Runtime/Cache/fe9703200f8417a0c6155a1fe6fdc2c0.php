@@ -1,10 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>项目管理系统 by www.nongfuit.com</title>
-    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/components/content.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/components/frame.css" rel="stylesheet" type="text/css" />
     <link href="../Public/css/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -29,28 +27,9 @@
 			</form>
 		</div>
 	</div>
+	<input type="hidden" id="login_check" value="<?php echo U('check');?>">
+	<input type="hidden" id="login_index" value="<?php echo U('Index/index');?>">
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
-<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
-<script>
-    $(function() {
-        $("#loginForm").submit(function(e){
-            $.ajax({
-                url:"<?php echo U('check');?>",
-                type:'POST',
-                data:{'name': $("#loginName").val(),'password':$('#loginPass').val(), 'fcode':$('#verifyCode').val()},
-                success:function(result){
-                    // console.log(result);
-                    console.log(result);
-                    if(result.status){
-                        window.location.href="<?php echo U('Index/index');?>"; 
-                    }else{
-                        alert(result.errMsg);
-                        // window.location.href="<?php echo U('Index/index');?>"; 
-                    }
-                }
-            })
-        });
-    });
-</script>
+<script src="../Public/js/login.index.js"></script>
 </html>

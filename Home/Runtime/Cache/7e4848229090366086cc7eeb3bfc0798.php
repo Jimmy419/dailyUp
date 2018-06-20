@@ -1,22 +1,21 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head>
-	<title>asdf</title>
-    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
+    <title>项目管理系统 by www.nongfuit.com</title>
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/components/content.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/css/components/frame.css" rel="stylesheet" type="text/css" />
     <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="indexPage">
-    <div class="content_page">
-        <link href="__PUBLIC__/css/components/header.css" rel="stylesheet" type="text/css" />
-<div class="header">
+<body>
+    <div class="frame">
+        <div class="frame_header">
 	<div><?php echo (session('username')); ?> [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
     <div><a href="<?php echo U('Columns/index');?>">类目</a></div>
     <div><a href="<?php echo U('Tables/index');?>">我的表</a></div>
     <div><a href="<?php echo U('Map/index');?>">表映射</a></div>
     <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div>
 </div>
-        <div class="content">
+        <div class="fram_content">
             <?php if(is_array($tblist)): $i = 0; $__LIST__ = $tblist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tb): $mod = ($i % 2 );++$i;?><div id='chart<?php echo ($tb[id]); ?>'></div><?php endforeach; endif; else: echo "" ;endif; ?>
             <div class="for_sub_chart"></div>
             <div id="container"></div>
@@ -54,14 +53,10 @@
             <input type="hidden" id="logoutLink" value="<?php echo U('Login/logout');?>">
             <input type="hidden" id="loginLink" value="<?php echo U('Login/index');?>">
             <input type="hidden" id="getDateLink" value="<?php echo U('getDate');?>">
-        </div>        
+        </div> 
+        <div class="frame_footer">Copy-right</div> 
     </div>
 </body>
-<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
-<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
-<script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script>
-<script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script>
-<!-- <script src="__PUBLIC__/plugins/highcharts/exporting.js"></script>
-<script src="__PUBLIC__/plugins/highcharts/highcharts-zh_CN.js"></script> -->
-<script type="text/javascript" src="../Public/js/drawchart.js"></script>
+<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script><script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script><script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script><script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="../Public/js/index.index.js"></script>
 </html>

@@ -1,0 +1,31 @@
+/*----------------------------------------------------*
+**for different browser fun***********************begin
+*----------------------------------------------------*/
+/*----------------------------------------------------*
+**for different browser fun*************************end
+*----------------------------------------------------*/
+.frame {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  flex-direction: column;
+  height: 100%; }
+  .frame .frame_header {
+    flex: 0 0 auto;
+    background-color: #E0301E;
+    display: flex; }
+  .frame .fram_content {
+    flex: 1 1 auto;
+    overflow: auto; }
+  .frame .frame_footer {
+    flex: 0 0 auto;
+    display: flex;
+    padding: 8px 20px;
+    line-height: 24px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    background: #282F34;
+    color: #FFFFFF; }
