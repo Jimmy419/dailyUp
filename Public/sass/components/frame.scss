@@ -13,13 +13,20 @@
 
     .frame_header {
         flex: 0 0 auto;
-        background-color: $fill-red;
+        background-color: $default-color;
         display: flex;
+        min-height: 30px;
+        align-items: center;
+
+        .logout_box {
+            margin-right: 10px;
+        }
     }
 
     .fram_content {
         flex: 1 1 auto;
         overflow: auto;
+        padding: 20px;
     }
 
     .frame_footer {

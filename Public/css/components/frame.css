@@ -15,11 +15,16 @@
   height: 100%; }
   .frame .frame_header {
     flex: 0 0 auto;
-    background-color: #E0301E;
-    display: flex; }
+    background-color: #d04a02;
+    display: flex;
+    min-height: 30px;
+    align-items: center; }
+    .frame .frame_header .logout_box {
+      margin-right: 10px; }
   .frame .fram_content {
     flex: 1 1 auto;
-    overflow: auto; }
+    overflow: auto;
+    padding: 20px; }
   .frame .frame_footer {
     flex: 0 0 auto;
     display: flex;

@@ -1,9 +1,9 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 
 <head>
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/components/content.css" rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/content.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/components/frame.css" rel="stylesheet" type="text/css" />
-    <link href="../Public/css/login.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/components/login.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="loginPage">
@@ -23,7 +23,7 @@
 			    <img src="<?php echo U('verify');?>" style='cursor:pointer' onclick='this.src="<?php echo U('verify');?>/"+Math.random()' />
 			    <input type="text" class="form-control" id="verifyCode">
 			  </div>
-			  <button type="submit" class="btn btn-default form-control">Login</button>
+			  <button type="submit" class="btn btn-default form-control a-btn-theme">Login</button>
 			</form>
 		</div>
 	</div>

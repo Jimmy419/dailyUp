@@ -9,9 +9,12 @@
     <div class="frame">
         <include file="Ahtml:header" />
         <div class="fram_content">
-            <volist name='tblist' id="tb">
-                <div id='chart{$tb[id]}'></div>
-            </volist>
+
+            <div class="row">
+                <volist name='tblist' id="tb">
+                    <div class="col-sm-6" id='chart{$tb[id]}'></div>
+                </volist>
+            </div>
             <div class="for_sub_chart"></div>
             <div id="container"></div>
             <div>我的数据</div>

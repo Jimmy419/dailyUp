@@ -187,45 +187,27 @@ h6 {
 .a-font-12 {
   font-size: 12px; }
 
-#button * {
-  vertical-align: text-bottom; }
-
-#button > div {
-  margin-bottom: 2rem; }
-
-#button div:not(.btn-group) button {
-  margin: 0.5rem; }
-
-.bg-infor {
-  background-color: #8052c4 !important;
-  border: #8052c4 !important; }
-  .bg-infor:focus, .bg-infor:hover {
-    background-color: #8052c4 !important;
-    border: #8052c4 !important; }
-
-.bg-warning {
+.a-bg-warning {
   background-color: #ffbf1f;
   border: #ffbf1f !important; }
 
-.bg-error {
+.a-bg-error {
   background-color: #c52a1a;
   border: #c52a1a !important; }
 
-.bg-success {
+.a-bg-theme {
+  background-color: #d04a02; }
+
+.a-bg-success {
   background-color: #159b25;
   border: #159b25 !important; }
 
-.a-relative-pos {
-  position: relative; }
-
-.a-absolute-pos {
-  position: absolute; }
-  .a-absolute-pos.a-top-50 {
-    top: 50%;
-    transform: translateY(-50%); }
-
-.a-primary-btn-with-pic span {
-  margin-left: 1.25rem; }
-
-.a-color-error {
+.a-text-error {
   color: #c62b12 !important; }
+
+.a-text-white {
+  color: #FFFFFF !important; }
+
+.a-btn-theme {
+  background-color: #d04a02;
+  color: #FFFFFF; }

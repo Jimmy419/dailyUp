@@ -232,68 +232,50 @@ h6 {
     margin: 0 !important;
 }
 
+
+
+//font size
 .a-font-12 {
     font-size: 12px;
 }
 
-#button {
-    * {
-        vertical-align: text-bottom;
-    }
-    > div {
-        margin-bottom: 2rem;
-    }
-    div:not(.btn-group) {
-        button {
-            margin: 0.5rem;
-        }
-    }
-}
 
-.bg-infor {
-    background-color: #8052c4 !important;
-    border: #8052c4 !important;
 
-    &:focus,
-    &:hover {
-        background-color: #8052c4 !important;
-        border: #8052c4 !important;
-    }
-}
-
-.bg-warning {
+//background color
+.a-bg-warning {
     background-color: #ffbf1f;
     border: #ffbf1f !important;
 }
 
-.bg-error {
+.a-bg-error {
     background-color: #c52a1a;
     border: #c52a1a !important;
 }
 
-.bg-success {
+.a-bg-theme {
+    background-color: $default-color;
+}
+
+.a-bg-success {
     background-color: $state-success-color;
     border: $state-success-color !important;
 }
 
-.a-relative-pos {
-    position: relative;
-}
 
-.a-absolute-pos {
-    position: absolute;
-    &.a-top-50 {
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
 
-.a-primary-btn-with-pic {
-    span {
-        margin-left: 1.25rem;
-    }
-}
-
-.a-color-error {
+//text color
+.a-text-error {
     color: $state-error-color !important;
+}
+
+.a-text-white {
+    color: $text-white !important;
+}
+
+
+
+//components
+.a-btn-theme {
+    background-color: $default-color;
+    color: $text-white;
 }

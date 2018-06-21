@@ -2,21 +2,27 @@
 <html>
 <head>
     <title>项目管理系统 by www.nongfuit.com</title>
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/components/content.css" rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
+<link href='__PUBLIC__/plugins/bootstrap/css/bootstrap-grid.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/content.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/components/frame.css" rel="stylesheet" type="text/css" />
     <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <div class="frame">
-        <div class="frame_header">
-	<div><?php echo (session('username')); ?> [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
-    <div><a href="<?php echo U('Columns/index');?>">类目</a></div>
-    <div><a href="<?php echo U('Tables/index');?>">我的表</a></div>
-    <div><a href="<?php echo U('Map/index');?>">表映射</a></div>
-    <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div>
+        <div class="frame_header a-d-flex">
+	<div class="a-flex-stretch a-d-flex">
+	    <div><a href="<?php echo U('Columns/index');?>">类目</a></div>
+	    <div><a href="<?php echo U('Tables/index');?>">我的表</a></div>
+	    <div><a href="<?php echo U('Map/index');?>">表映射</a></div>
+	    <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div>		
+	</div>
+    <div class="a-text-white a-flex-auto logout_box"><?php echo (session('username')); ?> [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="a-text-white">退出</a>&nbsp;]</div>
 </div>
         <div class="fram_content">
-            <?php if(is_array($tblist)): $i = 0; $__LIST__ = $tblist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tb): $mod = ($i % 2 );++$i;?><div id='chart<?php echo ($tb[id]); ?>'></div><?php endforeach; endif; else: echo "" ;endif; ?>
+
+            <div class="row">
+                <?php if(is_array($tblist)): $i = 0; $__LIST__ = $tblist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tb): $mod = ($i % 2 );++$i;?><div class="col-sm-6" id='chart<?php echo ($tb[id]); ?>'></div><?php endforeach; endif; else: echo "" ;endif; ?>
+            </div>
             <div class="for_sub_chart"></div>
             <div id="container"></div>
             <div>我的数据</div>
