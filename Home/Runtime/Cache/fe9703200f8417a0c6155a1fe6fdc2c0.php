@@ -1,7 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?><html>
 
 <head>
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/content.css" rel="stylesheet" type="text/css" />
+    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
+<link href='__PUBLIC__/plugins/bootstrap/css/bootstrap-grid.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/content.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/components/frame.css" rel="stylesheet" type="text/css" />
     <link href="__PUBLIC__/css/components/login.css" rel="stylesheet" type="text/css" />
 </head>

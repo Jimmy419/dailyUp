@@ -211,3 +211,46 @@ h6 {
 .a-btn-theme {
   background-color: #d04a02;
   color: #FFFFFF; }
+
+.a_dropdown {
+  position: relative; }
+  .a_dropdown .a_dropdown_value {
+    position: relative;
+    padding: 0 30px 0 10px;
+    cursor: pointer; }
+    .a_dropdown .a_dropdown_value:before {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -25%);
+      width: 10px;
+      height: 10px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #fff transparent transparent transparent; }
+    .a_dropdown .a_dropdown_value:after {
+      content: "";
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translate(0, -75%);
+      width: 10px;
+      height: 10px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent #fff transparent;
+      display: none; }
+  .a_dropdown .a_dropdown_box {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; }
+    .a_dropdown .a_dropdown_box .a_dropdown_list {
+      cursor: pointer; }
+  .a_dropdown.a_open .a_dropdown_value:before {
+    display: none; }
+  .a_dropdown.a_open .a_dropdown_value:after {
+    display: block; }
+  .a_dropdown.a_open .a_dropdown_box {
+    display: block; }

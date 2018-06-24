@@ -1,4 +1,14 @@
 <div class="frame_header a-d-flex">
+	<div class="a_dropdown">
+		<div class="a_dropdown_value">{$Think.session.utb.tablename}</div>
+		<ul class="a_dropdown_box">
+			<php>
+				foreach ($_SESSION['utbs'] as $utb) {
+					echo "<li class='a_dropdown_list' tid='".$utb[id]."'>$utb[tablename]</li>";
+				}
+			</php>
+		</ul>
+	</div>
 	<div class="a-flex-stretch a-d-flex">
 	    <div><a href="{:U('Columns/index')}">类目</a></div>
 	    <div><a href="{:U('Tables/index')}">我的表</a></div>

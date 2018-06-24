@@ -21,7 +21,7 @@
     align-items: center; }
     .frame .frame_header .logout_box {
       margin-right: 10px; }
-  .frame .fram_content {
+  .frame .frame_content {
     flex: 1 1 auto;
     overflow: auto;
     padding: 20px; }

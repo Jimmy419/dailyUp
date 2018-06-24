@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <include file="Acss:bootstrap,Acss:basic" />
+    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
+    <block name="css_link"></block>
+</head>
+<body>
+    <div class="frame">
+		<block name="header">
+			<include file="Ahtml:header" />
+		</block>
+        <div class="frame_content">
+			<block name="content"></block>
+        </div> 
+        <block name="footer">
+        	<include file="Ahtml:footer" />
+        </block>
+    </div>
+</body>
+<include file="Ajs:jquery,Ajs:bootstrap,Ajs:highcharts,Ajs:underscore" />
+<block name="js_links"></block>
+</html>
