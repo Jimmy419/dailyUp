@@ -1,0 +1,45 @@
+<extend name="Public:basic" />
+<block name="css_link">
+    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
+</block>
+<block name="content">
+    <div>我的数据</div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <th>id</th>
+            <th>Table Name</th>
+            <th>Class Id</th>
+            <th>所属分类</th>
+            <th>列名</th>
+            <th>值</th>
+            <th>备注</th>
+            <th>时间</th>
+            <th>填写时间</th>
+            <th colspan="2">Setting</th>
+        </thead>
+        <tbody>
+            <volist name='tables' id="table">
+                <tr>
+                    <td>{$table[id]}</td>
+                    <td>{$table[tablename]}</td>
+                    <td>{$table[cid]}</td>
+                    <td>{$table[mclass]}</td>
+                    <td>{$table[name]}</td>
+                    <td>{$table[value]}</td>
+                    <td>{$table[notes]}</td>
+                    <td>{$table[time]}</td>
+                    <td>{$table[ctime]}</td>
+                    <td><a href="{:U('edit')}/id/{$table[dataId]}/cid/{$table[cid]}">Edit</a></td>
+                    <td><a href="{:U('delete')}/id/{$table[dataId]}">Delete</a></td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <div><a href="{:U('add')}" class="left-font01">添加数据</a></div>
+    <input type="hidden" id="logoutLink" value="{:U('Login/logout')}">
+    <input type="hidden" id="loginLink" value="{:U('Login/index')}">
+    <input type="hidden" id="getDateLink" value="{:U('getDate')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/index.index.js" />
+</block>

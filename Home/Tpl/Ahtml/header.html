@@ -10,10 +10,14 @@
 		</ul>
 	</div>
 	<div class="a-flex-stretch a-d-flex">
-	    <div><a href="{:U('Columns/index')}">类目</a></div>
+		<div class="{$_SESSION['tabidx'] == 1?'active':''}"><a href="{:U('Index/index')}">图表</a></div>
+		<div class="{$_SESSION['tabidx'] == 2?'active':''}"><a href="{:U('Data/index')}">我的数据</a></div>
+	    <!-- <div><a href="{:U('Columns/index')}">类目</a></div>
 	    <div><a href="{:U('Tables/index')}">我的表</a></div>
 	    <div><a href="{:U('Map/index')}">表映射</a></div>
-	    <div><a href="{:U('Upload/index')}">上传数据</a></div>		
+	    <div><a href="{:U('Upload/index')}">上传数据</a></div> -->		
 	</div>
     <div class="a-text-white a-flex-auto logout_box">{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="a-text-white">退出</a>&nbsp;]</div>
+    <input type="hidden" value="{:U('Common/setSesstionTb')}" id="setSesstionTb">
+    <input type="hidden" value="{:U('Index/index')}" id="indexIndex">
 </div>

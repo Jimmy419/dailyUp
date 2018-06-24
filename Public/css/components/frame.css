@@ -19,6 +19,8 @@
     display: flex;
     min-height: 30px;
     align-items: center; }
+    .frame .frame_header .active > a {
+      color: #FFFFFF; }
     .frame .frame_header .logout_box {
       margin-right: 10px; }
   .frame .frame_content {

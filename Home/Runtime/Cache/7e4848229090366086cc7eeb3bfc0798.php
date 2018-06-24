@@ -21,12 +21,16 @@
 		</ul>
 	</div>
 	<div class="a-flex-stretch a-d-flex">
-	    <div><a href="<?php echo U('Columns/index');?>">类目</a></div>
+		<div class="<?php echo ($_SESSION['tabidx'] == 1?'active':''); ?>"><a href="<?php echo U('Index/index');?>">图表</a></div>
+		<div class="<?php echo ($_SESSION['tabidx'] == 2?'active':''); ?>"><a href="<?php echo U('Data/index');?>">我的数据</a></div>
+	    <!-- <div><a href="<?php echo U('Columns/index');?>">类目</a></div>
 	    <div><a href="<?php echo U('Tables/index');?>">我的表</a></div>
 	    <div><a href="<?php echo U('Map/index');?>">表映射</a></div>
-	    <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div>		
+	    <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div> -->		
 	</div>
     <div class="a-text-white a-flex-auto logout_box"><?php echo (session('username')); ?> [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="a-text-white">退出</a>&nbsp;]</div>
+    <input type="hidden" value="<?php echo U('Common/setSesstionTb');?>" id="setSesstionTb">
+    <input type="hidden" value="<?php echo U('Index/index');?>" id="indexIndex">
 </div>
 		
         <div class="frame_content">
@@ -35,7 +39,7 @@
         <?php if(is_array($tblist)): $i = 0; $__LIST__ = $tblist;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tb): $mod = ($i % 2 );++$i;?><div class="col-sm-6" id='chart<?php echo ($tb[id]); ?>'></div><?php endforeach; endif; else: echo "" ;endif; ?>
     </div>
     <div class="for_sub_chart"></div>
-    <div id="container"></div>
+    <!-- <div id="container"></div>
     <div>我的数据</div>
     <table class="table table-bordered table-hover">
         <thead>
@@ -66,7 +70,7 @@
                 </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
     </table>
-    <div><a href="<?php echo U('add');?>" class="left-font01">添加数据</a></div>
+    <div><a href="<?php echo U('add');?>" class="left-font01">添加数据</a></div> -->
     <input type="hidden" id="logoutLink" value="<?php echo U('Login/logout');?>">
     <input type="hidden" id="loginLink" value="<?php echo U('Login/index');?>">
     <input type="hidden" id="getDateLink" value="<?php echo U('getDate');?>">
@@ -77,7 +81,7 @@
         
     </div>
 </body>
-<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script><script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script><script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script><script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script>
+<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script><script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script><script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script><script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script><script src="../Public/js/common.js"></script>
 
     <script type="text/javascript" src="../Public/js/index.index.js"></script>
 
