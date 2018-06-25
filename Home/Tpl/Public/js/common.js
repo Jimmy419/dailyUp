@@ -1,6 +1,6 @@
 $(function() {   	
 
-    //dropdown
+    //dropdown:select table
     $('body').on('click','.a_dropdown .a_dropdown_value',function(e){
         e.stopPropagation();
         $(e.target).closest('.a_dropdown').toggleClass('a_open');
@@ -28,4 +28,19 @@ $(function() {
     });
 
 
+    //logout
+    $(".logout").click(function(){
+        $.ajax({
+            url:$("#logoutLink").val(),
+            type:'get',
+            success:function(result){
+                if(result.status){
+                    alert("You have logged out!");
+                    window.location.href=$("#loginLink").val(); 
+                }else{
+                    alert("Logout failed!");
+                }
+            }
+        })              
+    })
 });

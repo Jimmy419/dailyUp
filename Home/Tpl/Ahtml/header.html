@@ -17,7 +17,9 @@
 	    <div><a href="{:U('Map/index')}">表映射</a></div>
 	    <div><a href="{:U('Upload/index')}">上传数据</a></div> -->		
 	</div>
-    <div class="a-text-white a-flex-auto logout_box">{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="a-text-white">退出</a>&nbsp;]</div>
+    <div class="a-text-white a-flex-auto logout_box">{$Think.session.username} [&nbsp;<a href="javascript:void(0)" class="a-text-white logout">退出</a>&nbsp;]</div>
+    <input type="hidden" value="{:U('Login/index')}" id="loginLink">
+    <input type="hidden" value="{:U('Common/logout')}" id="logoutLink">
     <input type="hidden" value="{:U('Common/setSesstionTb')}" id="setSesstionTb">
     <input type="hidden" value="{:U('Index/index')}" id="indexIndex">
 </div>

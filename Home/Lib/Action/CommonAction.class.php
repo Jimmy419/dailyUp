@@ -38,5 +38,14 @@ class CommonAction extends Action
 		$data[status] = 1;
         $this->ajaxReturn($data);  
     }
+
+    public function logout(){
+		setcookie(session_name(),'',time()-3600,'/');
+		session_unset();
+		session_destroy();
+		$data[status] = 1;
+		$data[value] = 'Logout success!';
+        $this->ajaxReturn($data);  
+    }
 }
 ?>

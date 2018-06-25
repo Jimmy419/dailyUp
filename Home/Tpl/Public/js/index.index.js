@@ -1,103 +1,80 @@
 $(function() {   	
     var data = null;
     var tables = null;
-	$("#logoutLink").click(function(){
-        $.ajax({
-            url:$("#logoutLink").val(),
-            type:'get',
-            success:function(result){
-                if(result.status){
-                    window.location.href=$("#loginLink").val(); 
-                }else{
-                    alert("Logout failed!");
-                }
-            }
-        })      		
-	})
 
     $.ajax({
         url:$("#getDateLink").val(),
         type:'get',
         success:function(result){
+            console.log(result);
             var data = result.data;
+            var columns = result.tablecols;
             var tables = result.tables;
+            var table = result.table;
             var subtabs = result.subtables;
-            subCharts(tables,data,subtabs);
-            drawCharts(tables,data);
+            // subCharts(tables,data,subtabs);
+            drawCharts(table,columns,data);
         }
     })
 
-    function drawCharts(tables,data){
-        tables.forEach(function(table){
-            var chartData = [];
-            var chartCol = [];
-            var chartColId = [];
-            var series = [];
-            data.forEach(function(val){
-                if(val.tid === table.id) {
-                    chartData.push(val);
-                    chartCol.push(val.name);
-                    chartColId.push(val.cid);
+    function drawCharts(table, columns, data){
+        $(".chart-box").append("<div class='col-sm-6' id='chart"+table.id+"'></div>");
+        var series = [];
+        columns.forEach(function(col,colIndex){
+            var itemData = [];
+            data.forEach(function(dataItem){
+                if(dataItem.cid === col.cid){
+                    var temp = [
+                        parseFloat(dataItem.time)*1000,
+                        parseFloat(dataItem.value)
+                    ];
+                    itemData.push(temp);                            
                 }
-            });
-            chartColName = _.uniq(chartCol);
-            chartColId = _.uniq(chartColId);
-            chartColId.forEach(function(col,colIndex){
-                var itemData = [];
-                chartData.forEach(function(itemDataItem){
-                    if(itemDataItem.cid === col){
-                        var temp = [
-                            parseFloat(itemDataItem.time)*1000,
-                            parseFloat(itemDataItem.value)
-                        ];
-                        itemData.push(temp);                            
-                    }
-                })
-                var chartItem = {
-                    name: chartColName[colIndex],
-                    data: itemData
-                }
-                series.push(chartItem);
             })
+            var chartItem = {
+                name: col.name,
+                data: itemData
+            }
+            series.push(chartItem);
+        })
 
-            var chart1 = Highcharts.chart('chart'+table.id, {
-                chart: {
-                    type: 'spline'
-                },
+        Highcharts.chart('chart'+table.id, {
+            chart: {
+                type: 'spline'
+            },
+            title: {
+                text: table.tablename
+            },
+            subtitle: {
+                text: null
+            },
+            xAxis: {
                 title: {
-                    text: table.tablename
-                },
-                subtitle: {
                     text: null
                 },
-                xAxis: {
-                    title: {
-                        text: null
-                    },
-                    type: "datetime",
-                    labels: {
-                        format: '{value: %Y%m%d}'
+                type: "datetime",
+                labels: {
+                    format: '{value: %Y%m%d}'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: null
+                },
+                min: 0
+            },
+            tooltip: {
+                split: true
+            },
+            plotOptions: {
+                spline: {
+                    marker: {
+                        enabled: true
                     }
-                },
-                yAxis: {
-                    title: {
-                        text: null
-                    },
-                    min: 0
-                },
-                tooltip: {
-                    split: true
-                },
-                plotOptions: {
-                    spline: {
-                        marker: {
-                            enabled: true
-                        }
-                    }
-                },
-                series: series
-            });
-        })
+                }
+            },
+            series: series
+        });
     }
 
     function clarrifySubCols(table,subtables){

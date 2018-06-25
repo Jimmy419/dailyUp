@@ -1,12 +1,13 @@
 <extend name="Public:basic" />
 <block name="css_link">
-    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/components/index.css" rel="stylesheet" type="text/css" />
 </block>
 <block name="content">
-    <div class="row">
-        <volist name='tblist' id="tb">
+    <div class="row chart-box">
+        <!-- <volist name='tblist' id="tb">
             <div class="col-sm-6" id='chart{$tb[id]}'></div>
-        </volist>
+        </volist> -->
+        <!-- <div class="col-sm-6" id='chart{$tb[id]}'></div> -->
     </div>
     <div class="for_sub_chart"></div>
     <!-- <div id="container"></div>
