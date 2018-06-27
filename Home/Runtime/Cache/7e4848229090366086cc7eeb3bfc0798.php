@@ -39,8 +39,6 @@
     <div class="row chart-box">
     </div>
     <div class="for_sub_chart"></div>
-    <input type="hidden" id="logoutLink" value="<?php echo U('Login/logout');?>">
-    <input type="hidden" id="loginLink" value="<?php echo U('Login/index');?>">
     <input type="hidden" id="getDateLink" value="<?php echo U('getDate');?>">
 
         </div> 

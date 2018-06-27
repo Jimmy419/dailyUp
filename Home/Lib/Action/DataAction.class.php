@@ -29,7 +29,6 @@ class DataAction extends CommonAction {
         $test[cid]=$_POST[cid];
         $test[time]=$_POST[time];
         $rst = $datasend->where($test)->find();
-        // $data['mess'] = $datasend->getLastSql();
         if($rst){
             $data['status']  = 0;
             $data['errMsg'] = "不能重复插入！";
@@ -64,15 +63,14 @@ class DataAction extends CommonAction {
         $datas['value']=$_POST['value'];
         $datas['ctime']=$_POST['ctime'];
         if($maindata->where('id='.$_POST[id])->save($datas)){
-            // $this->success('更新成功', U('index'));
             $data['mess'] = $maindata->getLastSql();
             $data['status']  = 1;
-            $data['errMsg'] = "Data insert successfully!";
+            $data['errMsg'] = "Data update successfully!";
             $this->ajaxReturn($data);
         }else{
             $data['mess'] = $maindata->getLastSql();
             $data['status']  = 0;
-            $data['errMsg'] = "Data insert failed!";
+            $data['errMsg'] = "Data update failed!";
             $this->ajaxReturn($data);
         }
     }

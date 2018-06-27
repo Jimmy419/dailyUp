@@ -1,0 +1,19 @@
+<extend name="Public:basic" />
+<block name="content">
+    <form id="updateDataForm" onsubmit="return false" action="{:U('update')}" method="post">
+        <label class="form-label">编辑column</label>
+        <div class="form-control">{$column.mclass}-({$column.name})</div>
+        <label class="form-label">值</label>
+        <input class="form-control" type="text" name="value" id="iptVal" value="{$currentData.value}">
+        <label class="form-label">备注</label>
+        <textarea class="form-control" id="remarks">{$currentData.notes}</textarea>
+        <label class="form-label">时间</label>
+        <div class="form-control">{$time}</div>
+        <input type="hidden" value="{$currentData.id}" id="data_id">
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="data_index" value="{:U('Data/index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/data.edit.js" />
+</block>
