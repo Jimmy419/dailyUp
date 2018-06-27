@@ -88,13 +88,5 @@ class IndexAction extends CommonAction {
   //       }
   //   }
 
-  //   public function delete(){
-  //       $id=$_GET[id];
-  //       $cols=M('maindata');
-  //       if($cols->delete($id)){
-  //           $this->success('删除成功', U('index'));
-  //       }else{
-  //           $this->error('删除失败', U('index'));
-  //       }
-  //   }
+
 }

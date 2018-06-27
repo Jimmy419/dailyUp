@@ -17,15 +17,15 @@ class DataAction extends CommonAction {
     }
 
     public function add(){
-        $cols = M("columns");
-        $this->colums = $cols->where('uid='.$_SESSION['uid'])->select();
+        $utbs = M("utbs");
+        $this->columns = $utbs->field('columns.*')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.id='.$_SESSION['utb'][id])->select();
         $this->display();
     }
 
     public function insert(){
         $datasend=M('maindata');
         $datasend->create();
-        // $data->password=md5($_POST['password']);
+        $test[uid]=$_SESSION[uid];
         $test[cid]=$_POST[cid];
         $test[time]=$_POST[time];
         $rst = $datasend->where($test)->find();
@@ -56,7 +56,6 @@ class DataAction extends CommonAction {
         $this->currentData = $maindata->find($id);
         $this->time = date('Y-m-d', $this->currentData[time]);
         $this->display();
-        // var_dump(time('2018-06-03'));
     }
     
     public function update(){

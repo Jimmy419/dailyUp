@@ -1,0 +1,29 @@
+<extend name="Public:basic" />
+<block name="content">
+    <form id="addDataForm" onsubmit="return false" action="{:U('insert')}" method="post">
+        <label class="form-label">选择COLUMN</label>
+        <select class="form-control" name="carlist" id="colVal">
+            <volist name='columns' id="col">
+                <option value="{$col[id]}">{$col[name]}({$col[mclass]})</option>
+            </volist>
+        </select>
+        <label class="form-label">值</label>
+        <input class="form-control" type="text" name="value" id="iptVal">
+        <label class="form-label">备注</label>
+        <textarea class="form-control" id="remarks"></textarea>
+        <label class="form-label">时间</label>
+        <div class="control-group">
+            <div class="controls input-append date form_date" data-date="" data-date-format="dd MM yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                <input class="form-control" size="16" type="text" value="" readonly>
+                <span class="add-on"><i class="icon-remove"></i></span>
+                <span class="add-on"><i class="icon-th"></i></span>
+            </div>
+            <input type="hidden" id="dtp_input2" value="" /><br/>
+        </div>
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="data_index" value="{:U('Data/index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/data.add.js" />
+</block>
