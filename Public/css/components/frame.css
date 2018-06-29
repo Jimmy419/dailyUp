@@ -23,6 +23,14 @@
       color: #FFFFFF; }
     .frame .frame_header .logout_box {
       margin-right: 10px; }
+    .frame .frame_header .settings_box {
+      margin-right: 10px;
+      color: #FFFFFF;
+      cursor: pointer; }
+      .frame .frame_header .settings_box .dropdown-menu {
+        right: 0;
+        padding: 10px;
+        left: auto; }
   .frame .frame_content {
     flex: 1 1 auto;
     overflow: auto;

@@ -26,6 +26,17 @@
         .logout_box {
             margin-right: 10px;
         }
+        .settings_box {
+            margin-right: 10px;
+            color: $text-white;
+            cursor: pointer;
+
+            .dropdown-menu {
+                right: 0;
+                padding: 10px;
+                left: auto;
+            }
+        }
     }
 
     .frame_content {
