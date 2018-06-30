@@ -2,7 +2,7 @@
 // 本类由系统自动生成，仅供测试用途
 class MapAction extends CommonAction {
     public function index(){
-    	$cols = M("utbs"); // 实例化User对象
+    	$cols = M("utbs");
 		$this->tbs = $cols->field('utbs.*,tconf.id as tfid, tconf.cid,columns.mclass,columns.name')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
 		$this->display();
     }
@@ -18,16 +18,19 @@ class MapAction extends CommonAction {
     public function insert(){
         $cols=M('tconf');
         $cols->create();
-        // $_POST[uid]=$_SESSION['uid'];
-        // $cols->uid=$_SESSION['uid'];
         if($rst = $cols->where($_POST)->find()){
-            // echo $cols->getLastSql();
-            $this->error('不能重复插入！', U('index'));
+            $data['status']  = 0;
+            $data['errMsg'] = "Duplicated item!";
+            $this->ajaxReturn($data);  
         }else{
             if($cols->add()){
-                $this->success('添加成功', U('index'));
+                $data['status']  = 1;
+                $data['errMsg'] = "Data insert successfully!";
+                $this->ajaxReturn($data);
             }else{
-                $this->error('插入失败', U('index'));
+                $data['status']  = 0;
+                $data['errMsg'] = "Insert failed!";
+                $this->ajaxReturn($data);
             }
         }
     }     
@@ -45,15 +48,21 @@ class MapAction extends CommonAction {
     
     public function update(){
         $utbs=M('tconf');
-        $data['cid']=$_POST['cid'];
-        $data['tid']=$_POST['tid'];
-        if($rst = $utbs->where($_POST)->find()){
-            $this->error('字段已存在！', U('index'));
+        $send['cid']=$_POST['cid'];
+        $send['tid']=$_POST['tid'];
+        if($rst = $utbs->where($send)->find()){
+            $data['status']  = 0;
+            $data['errMsg'] = "The item already exist!";
+            $this->ajaxReturn($data); 
         }else{
-            if($utbs->where('id='.$_POST[id])->save($data)){
-                $this->success('更新成功', U('index'));
+            if($utbs->where('id='.$_POST[id])->save($send)){
+                $data['status']  = 1;
+                $data['errMsg'] = "Data update successfully!";
+                $this->ajaxReturn($data);
             }else{
-                $this->error('更新失败', U('index'));
+                $data['status']  = 0;
+                $data['errMsg'] = "Data update failed!";
+                $this->ajaxReturn($data);
             }
         }
     }
