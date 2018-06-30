@@ -1,8 +1,7 @@
 <?php
-// 本类由系统自动生成，仅供测试用途
 class ColumnsAction extends CommonAction {
     public function index(){
-    	$cols = M("columns"); // 实例化User对象
+    	$cols = M("columns");
 		$this->colums = $cols->where('uid='.$_SESSION['uid'])->order('mclass, id')->select();
 		$this->display();
     }
@@ -17,13 +16,18 @@ class ColumnsAction extends CommonAction {
         $_POST[uid]=$_SESSION['uid'];
         $cols->uid=$_SESSION['uid'];
         if($rst = $cols->where($_POST)->find()){
-            // echo $cols->getLastSql();
-            $this->error('不能重复插入！', U('index'));
+            $data['status']  = 0;
+            $data['errMsg'] = "不能重复插入！";
+            $this->ajaxReturn($data); 
         }else{
             if($cols->add()){
-                $this->success('添加成功', U('index'));
+                $data['status']  = 1;
+                $data['errMsg'] = "Data insert successfully!";
+                $this->ajaxReturn($data);
             }else{
-                $this->error('插入失败', U('index'));
+                $data['status']  = 0;
+                $data['errMsg'] = "Data insert failed!";
+                $this->ajaxReturn($data);
             }
         }
     }     
@@ -32,24 +36,31 @@ class ColumnsAction extends CommonAction {
         $cols=M('columns');
         $id=$_GET[id];
         $this->col=$cols->find($id);
-        // echo $cols->getLastSql();
-        // echo "<pre>";
-        // print_r($this->col);
-        // echo "</pre>";
         $this->display();
     }
     
     public function update(){
         $cols=M('columns');
-        $data['mclass']=$_POST['mclass'];
-        $data['name']=$_POST['name'];
-        if($rst = $cols->where($_POST)->find()){
-            $this->error('字段已存在！', U('index'));
-        }else{
-            if($cols->where('id='.$_POST[id])->save($data)){
-                $this->success('更新成功', U('index'));
+        $testdata['mclass']=$_POST['mclass'];
+        $testdata['name']=$_POST['name'];
+        $testdata['uid']=$_SESSION['uid'];
+        $_POST[uid]=$_SESSION['uid'];
+        if($rst = $cols->where($testdata)->find()){
+            $data['status']  = 0;
+            $data['errMsg'] = "The item already exist!";
+            $this->ajaxReturn($data); 
+        }else{      
+            $updateData['mclass']=$_POST['mclass'];
+            $updateData['name']=$_POST['name'];
+            if($cols->where('id='.$_POST[id])->save($updateData)){
+                $data['sql']=$cols->getLastSql();
+                $data['status']  = 1;
+                $data['errMsg'] = "Data update successfully!";
+                $this->ajaxReturn($data);
             }else{
-                $this->error('更新失败', U('index'));
+                $data['status']  = 0;
+                $data['errMsg'] = "Data update failed!";
+                $this->ajaxReturn($data);
             }
         }
     }
