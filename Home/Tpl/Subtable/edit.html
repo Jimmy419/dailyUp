@@ -1,0 +1,19 @@
+<extend name="Public:basic" />
+<block name="content">
+    <form id="updateSubtable" onsubmit="return false" action="{:U('update')}" method="post">
+        <label class="form-label">Table name</label>
+        <select name="tid" id="tableId" class="form-control">
+            <volist name='tbs' id="tb">
+                <option value="{$tb[id]}" {$tb[id]==$currentsubtb[tid]?'selected':''}>{$tb[tablename]}</option>
+            </volist>
+        </select>
+        <label class="form-label">Table name</label>
+        <input class="form-control" id="tableName" name="tablename" value="{$currentsubtb[name]}"/>        
+        <input type="hidden" id="subtbId" name="id" value="{$currentsubtb[id]}">
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="subtableIndex" name="" value="{:U('index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/subtable.edit.js" />
+</block>

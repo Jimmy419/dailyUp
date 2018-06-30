@@ -1,0 +1,18 @@
+<extend name="Public:basic" />
+<block name="content">
+    <form id="subTableInsert" action="{:U('insert')}" onsubmit="return false" method='post'>
+        <label class="form-label">Select Parent Table</label>
+        <select name="tid" id="parentTableId" class="form-control">
+            <volist name='tbs' id="tb">
+                <option value="{$tb[id]}">{$tb[tablename]}</option>
+            </volist>
+        </select>
+        <label class="form-label">Table name</label>
+        <input class="form-control" id="tableName" name="tablename" />
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="subTableIndex" value="{:U('index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/subtable.add.js" />
+</block>

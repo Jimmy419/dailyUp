@@ -3,7 +3,7 @@
 class MapAction extends CommonAction {
     public function index(){
     	$cols = M("utbs");
-		$this->tbs = $cols->field('utbs.*,tconf.id as tfid, tconf.cid,columns.mclass,columns.name')->join(array('LEFT JOIN tconf ON utbs.id = tconf.tid','LEFT JOIN columns ON tconf.cid = columns.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
+		$this->tbs = $cols->field('utbs.*,tconf.id as tfid, tconf.cid,columns.mclass,columns.name')->join(array('INNER JOIN tconf ON utbs.id = tconf.tid','INNER JOIN columns ON tconf.cid = columns.id'))->where('utbs.uid='.$_SESSION['uid'])->select();
 		$this->display();
     }
 

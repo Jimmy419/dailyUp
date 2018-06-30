@@ -1,0 +1,28 @@
+<extend name="Public:basic" />
+<block name="content">
+    <div>我的表</div>
+    <div><a href="{:U('add')}" class="left-font01">添加表</a></div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <th>id</th>
+            <th>Parent table id</th>
+            <th>Sub table Name</th>
+            <th colspan="2">Settings</th>
+        </thead>
+        <tbody>
+            <volist name='tbs' id="item">
+                <tr>
+                    <td>{$item[id]}</td>
+                    <td>{$item[tid]}</td>
+                    <td>{$item[name]}</td>
+                    <td><a href="{:U('edit')}/id/{$item[id]}">Edit</a></td>
+                    <td><a href="javascript:void(0)" class="delteSubTb" link="{:U('delete')}/id/{$item[id]}">Delete</a></td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <input type="hidden" id="subTableIndex" name="" value="{:U('index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/subtable.delete.js" />
+</block>
