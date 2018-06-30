@@ -31,6 +31,8 @@
         right: 0;
         padding: 10px;
         left: auto; }
+        .frame .frame_header .settings_box .dropdown-menu > a {
+          display: block; }
   .frame .frame_content {
     flex: 1 1 auto;
     overflow: auto;

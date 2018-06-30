@@ -2,8 +2,9 @@
 // 本类由系统自动生成，仅供测试用途
 class TablesAction extends CommonAction {
     public function index(){
-    	$cols = M("utbs"); // 实例化User对象
+    	$cols = M("utbs");
 		$this->tbs = $cols->where('uid='.$_SESSION['uid'])->select();
+        $_SESSION['utbs'] = $this->tbs;
 		$this->display();
     }
 
@@ -17,7 +18,6 @@ class TablesAction extends CommonAction {
         $_POST[uid]=$_SESSION['uid'];
         $cols->uid=$_SESSION['uid'];
         if($rst = $cols->where($_POST)->find()){
-            // echo $cols->getLastSql();
             $this->error('不能重复插入！', U('index'));
         }else{
             if($cols->add()){
@@ -37,15 +37,19 @@ class TablesAction extends CommonAction {
     
     public function update(){
         $utbs=M('utbs');
-        $data['tablename']=$_POST['tablename'];
-        $data['uid']=$_SESSION['uid'];
-        if($rst = $utbs->where($_POST)->find()){
-            $this->error('字段已存在！', U('index'));
+        if($rst = $utbs->where('tablename="'.$_POST['tablename'].'" AND uid='.$_SESSION['uid'])->find()){
+            $data['status']  = 0;
+            $data['errMsg'] = "字段已存在！";
+            $this->ajaxReturn($data);  
         }else{
             if($utbs->where('id='.$_POST[id])->save($data)){
-                $this->success('更新成功', U('index'));
+                $data['status']  = 1;
+                $data['errMsg'] = "Data update successfully!";
+                $this->ajaxReturn($data);
             }else{
-                $this->error('更新失败', U('index'));
+                $data['status']  = 0;
+                $data['errMsg'] = "update failed!";
+                $this->ajaxReturn($data);  
             }
         }
     }

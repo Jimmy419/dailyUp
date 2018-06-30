@@ -35,6 +35,10 @@
                 right: 0;
                 padding: 10px;
                 left: auto;
+
+                &>a{
+                    display: block;
+                }
             }
         }
     }

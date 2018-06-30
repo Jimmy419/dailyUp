@@ -3,7 +3,7 @@
 <head>
 	<title></title>
     <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
-<link href='__PUBLIC__/plugins/bootstrap/css/bootstrap-grid.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/content.css" rel="stylesheet" type="text/css" />
+<link href='__PUBLIC__/plugins/bootstrap/css/bootstrap-grid.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/plugins/datepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet" type="text/css" /><link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" /><link href="__PUBLIC__/css/content.css" rel="stylesheet" type="text/css" />
 <link href="__PUBLIC__/css/components/frame.css" rel="stylesheet" type="text/css" />
     
     <link href="__PUBLIC__/css/components/index.css" rel="stylesheet" type="text/css" />
@@ -28,6 +28,19 @@
 	    <div><a href="<?php echo U('Upload/index');?>">上传数据</a></div> -->		
 	</div>
     <div class="a-text-white a-flex-auto logout_box"><?php echo (session('username')); ?> [&nbsp;<a href="javascript:void(0)" class="a-text-white logout">退出</a>&nbsp;]</div>
+	<div class="dropdown a-flex-auto settings_box">
+	  <button class="dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	    <i class="fa fa-cog fa-lg" ></i>
+	  </button>
+	  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		<a href="<?php echo U('Tables/index');?>">Tables</a>
+		<a href="<?php echo U('Columns/index');?>">Columns</a>
+		<a href="<?php echo U('Map/index');?>">Tables Columns Mapping</a>
+		<a href="">Subtables</a>
+		<a href="">Subtable columns</a>
+		<a href="">Upload data</a>
+	  </div>
+	</div>
     <input type="hidden" value="<?php echo U('Login/index');?>" id="loginLink">
     <input type="hidden" value="<?php echo U('Common/logout');?>" id="logoutLink">
     <input type="hidden" value="<?php echo U('Common/setSesstionTb');?>" id="setSesstionTb">

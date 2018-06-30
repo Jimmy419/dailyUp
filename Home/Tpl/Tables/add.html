@@ -1,92 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>asdf</title>
-    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
-    <link href='__PUBLIC__/plugins/datepicker/css/bootstrap-datetimepicker.min.css' rel="stylesheet" type="text/css" />
-    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
-</head>
-<body class="indexPage">
-	<div class="header">
-		<div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
-        <div><a href="{:U('Index/index')}" class="left-font01">主页</a></div>
-	</div>
-	<div class="content">
-        <form action="{:U('insert')}" method='post'>
-            <label class="form-label">Table name</label>
-            <input class="form-control" name="tablename" />
-            <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
-        </form>
-	</div>
-</body>
-<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
-<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
-<script src='__PUBLIC__/plugins/datepicker/js/bootstrap-datetimepicker.min.js'></script>
-<script>
-    $(function() {   	
-    	$("#logoutLink").click(function(){
-            $.ajax({
-                url:"{:U('Login/logout')}",
-                type:'get',
-                success:function(result){
-                    if(result.status){
-                        window.location.href="{:U('Login/index')}"; 
-                    }else{
-                        alert("Logout failed!");
-                    }
-                }
-            })      		
-    	})
-
-        $('.form_date').datetimepicker({
-            language:  'fr',
-            weekStart: 1,
-            todayBtn:  1,
-            autoclose: 1,
-            todayHighlight: 1,
-            startView: 2,
-            minView: 2,
-            forceParse: 0
-        });
-
-        function fmtDate(obj){
-            var date =  new Date(obj);
-            var y = 1900+date.getYear();
-            var m = "0"+(date.getMonth()+1);
-            var d = "0"+date.getDate();
-            return y+"-"+m.substring(m.length-2,m.length)+"-"+d.substring(d.length-2,d.length);
-        }
-
-
-        
-        $("#submitBtn").click(function(){
-            var time = new Date($('#dtp_input2').val()).getTime();
-            // console.log(fmtDate(time));
-
-            var data = {
-                'uid': {$Think.session.uid},
-                'cid':$('#colVal').val(),
-                'notes':$('#remarks').val(),
-                'value':$('#iptVal').val(),
-                'time':time,
-                'ctime': new Date().getTime()               
-            }
-            console.log(data);
-            $.ajax({
-                url:"{:U('insert')}",
-                type:'post',
-                data:data,
-                success:function(result){
-                    if(result.status){
-                        alert("Insert successfully!")
-                        // window.location.href="{:U('index')}"; 
-                    }else{
-                        alert(result.errMsg);
-                    }
-                }
-            })              
-        })
-    });
-</script>
-</html>
+<extend name="Public:basic" />
+<block name="content">
+    <form id="tableInsert" action="{:U('insert')}" onsubmit="return false" method='post'>
+        <label class="form-label">Table name</label>
+        <input class="form-control" id="tableName" name="tablename" />
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="tableIndex" value="{:U('index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/tables.add.js" />
+</block>
