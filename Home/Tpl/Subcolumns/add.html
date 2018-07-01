@@ -1,0 +1,24 @@
+<extend name="Public:basic" />
+<block name="content">
+    <form id="subColumnInsert" action="{:U('insert')}" onsubmit="return false" method='post'>
+        <label class="form-label">Select Sub Table</label>
+        <select name="tid" id="subTableId" class="form-control">
+            <volist name='stbs' id="tb">
+                <option value="{$tb[id]}">{$tb[name]}</option>
+            </volist>
+        </select>
+        <input type="hidden" id="getColumn" value="{:U('getColumn')}">
+        <label class="form-label">Subcolumn name</label>
+        <input class="form-control" id="subColName" name="tablename" />
+        <label class="form-label">Calculation</label>
+        <ul class="columns"></ul>
+        <input class="form-control" id="calculation" name="calculation" />
+        <label class="form-label">Unit</label>
+        <input class="form-control" id="unit" name="unit" value="{$currentsubcol[unit]}"/> 
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="subColumnIndex" value="{:U('index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/subcolumns.add.js" />
+</block>

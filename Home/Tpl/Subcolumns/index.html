@@ -1,0 +1,32 @@
+<extend name="Public:basic" />
+<block name="content">
+    <div>Subcolumns</div>
+    <div><a href="{:U('add')}" class="left-font01">Add subcolumns</a></div>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <th>id</th>
+            <th>Sub table id</th>
+            <th>Sub column Name</th>
+            <th>Calculation</th>
+            <th>Unit</th>
+            <th colspan="2">Settings</th>
+        </thead>
+        <tbody>
+            <volist name='subcolumns' id="item">
+                <tr>
+                    <td>{$item[id]}</td>
+                    <td>{$item[stid]}</td>
+                    <td>{$item[subtbcolname]}</td>
+                    <td>{$item[calculation]}</td>
+                    <td>{$item[unit]}</td>
+                    <td><a href="{:U('edit')}/id/{$item[id]}">Edit</a></td>
+                    <td><a href="javascript:void(0)" class="delteSubCol" link="{:U('delete')}/id/{$item[id]}">Delete</a></td>
+                </tr>
+            </volist>
+        </tbody>
+    </table>
+    <input type="hidden" id="subColumnsIndex" name="" value="{:U('index')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/subcolumns.delete.js" />
+</block>

@@ -36,9 +36,9 @@
 		<a href="<?php echo U('Tables/index');?>">Tables</a>
 		<a href="<?php echo U('Columns/index');?>">Columns</a>
 		<a href="<?php echo U('Map/index');?>">Tables Columns Mapping</a>
-		<a href="">Subtables</a>
-		<a href="">Subtable columns</a>
-		<a href="">Upload data</a>
+		<a href="<?php echo U('Subtable/index');?>">Subtables</a>
+		<a href="<?php echo U('Subcolumns/index');?>">Subtable columns</a>
+		<a href="<?php echo U('Upload/index');?>">Upload data</a>
 	  </div>
 	</div>
     <input type="hidden" value="<?php echo U('Login/index');?>" id="loginLink">
