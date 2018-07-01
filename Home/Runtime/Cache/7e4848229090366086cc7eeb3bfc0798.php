@@ -61,7 +61,8 @@
     </div>
 </body>
 <script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script><script src='__PUBLIC__/plugins/tether/tether.min.js'></script>
-<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script><script src='__PUBLIC__/plugins/datepicker/js/bootstrap-datetimepicker.min.js'></script><script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script><script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script><script src="../Public/js/common.js"></script>
+<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script><script src='__PUBLIC__/plugins/datepicker/js/bootstrap-datetimepicker.min.js'></script><script src="__PUBLIC__/plugins/highcharts/highcharts.js"></script><script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script><script src="__PUBLIC__/plugins/xlsx/shim.js"></script>
+<script src="__PUBLIC__/plugins/xlsx/xlsx.full.min.js"></script><script src="../Public/js/common.js"></script>
 
     <script type="text/javascript" src="../Public/js/index.index.js"></script>
 

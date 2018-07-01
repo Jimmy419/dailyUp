@@ -1,114 +1,19 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>asdf</title>
-    <link href='__PUBLIC__/plugins/font-awesome/css/font-awesome.min.css' rel="stylesheet" type="text/css" />
-    <link href='__PUBLIC__/plugins/bootstrap/css/bootstrap.min.css' rel="stylesheet" type="text/css" />
-    <link href="../Public/css/index.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body class="indexPage">
-    <div class="header">
-        <div>{$Think.session.username} [&nbsp;<a href="javascript:void(0)" onclick="logout()" id="logoutLink" class="left-font01">退出</a>&nbsp;]</div>
-        <div><a href="{:U('Index/index')}" class="left-font01">主页</a></div>
-    </div>
-    <div class="content">
-        <form id="multiDataForm" onsubmit="return false">
-            <label class="form-label">选择COLUMN</label>
-            <select class="form-control" name="carlist" id="colVal">
-                <volist name='colums' id="col">
-                    <option value="{$col[id]}">{$col[name]}({$col[mclass]})</option>
-                </volist>
-            </select>
-            <label class="form-label">上传Excel文件</label>
-            <input type="file" name="file" id="upfile">
-            <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
-        </form>
-    </div>
-</body>
-<script src='__PUBLIC__/plugins/jquery/jquery.min.js'></script>
-<script src='__PUBLIC__/plugins/bootstrap/js/bootstrap.min.js'></script>
-<script src="__PUBLIC__/plugins/underscore/underscore-min.js"></script>
-<script src='http://oss.sheetjs.com/js-xlsx/shim.js'></script>
-<script src="http://oss.sheetjs.com/js-xlsx/xlsx.full.min.js"></script>
-<script>
-$(function() {
-    $("#logoutLink").click(function() {
-        $.ajax({
-            url: "{:U('Login/logout')}",
-            type: 'get',
-            success: function(result) {
-                if (result.status) {
-                    window.location.href = "{:U('Login/index')}";
-                } else {
-                    alert("Logout failed!");
-                }
-            }
-        })
-    })
-
-    var dataArr = [];
-    var upFile = document.getElementById('upfile');
-    var rABS = true; // true: readAsBinaryString ; false: readAsArrayBuffer
-    function handleFile(e) {
-        var files = e.target.files, f = files[0];
-        var reader = new FileReader();
-        reader.onload = function(e) {
-            var data = e.target.result;
-            if(!rABS) data = new Uint8Array(data);
-            var workbook = XLSX.read(data, {type: rABS ? 'binary' : 'array'});
-
-            /* DO SOMETHING WITH workbook HERE */
-            // console.log(workbook);
-            var obj = workbook.Sheets.Sheet1;
-            var reg = /\d+$/;
-            var dataLength = workbook.Sheets.Sheet1['!ref'].match(reg)[0];
-            for (var i=1;i<dataLength;i++)
-            {
-                var time1 = obj['A'+(i+1)].v + '';
-                var time1 = time1.replace(/^(\d{4})(\d{2})(\d{2})$/,"$1-$2-$3")
-                var time = Date.parse(new Date(time1))/1000;
-                // time1 = timestampToTime(time1);
-                var ijson = {
-                    'value': obj['B'+(i+1)].v,
-                    'time': time
-                };
-                dataArr.push(ijson);                
-            }
-        };
-        if(rABS) reader.readAsBinaryString(f); else reader.readAsArrayBuffer(f);
-    }
-    upFile.addEventListener('change', handleFile, false);
-
-
-
-    $("#multiDataForm").submit(function(e){
-        dataArr.forEach(function(value){
-            value.uid = {$Think.session.uid};
-            value.cid = $('#colVal').val();
-            value.ctime = Date.parse(new Date())/1000;
-        });
-        var postData = {
-            cid: $('#colVal').val(),
-            data:dataArr
-        }
-        $.ajax({
-            url:"{:U('upload')}",
-            type:'post',
-            data:postData,
-            success:function(result){
-                // console.log(result);
-                if(result.status){
-                    alert("Insert successfully!")
-                    // window.location.href="{:U('index')}"; 
-                }else{
-                    alert(result.errMsg);
-                }
-            }
-        })              
-    });
-});
-</script>
-
-</html>
+<extend name="Public:basic" />
+<block name="content">
+    <form id="multiDataForm" onsubmit="return false">
+        <label class="form-label">选择COLUMN</label>
+        <select class="form-control" name="carlist" id="colVal">
+            <volist name='colums' id="col">
+                <option value="{$col[id]}">{$col[name]}({$col[mclass]})</option>
+            </volist>
+        </select>
+        <label class="form-label">上传Excel文件</label>
+        <input type="file" name="file" id="upfile">
+        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+    </form>
+    <input type="hidden" id="userId" value="{$Think.session.uid}">
+    <input type="hidden" id="uploadLink" value="{:U('upload')}">
+</block>
+<block name="js_links">
+    <js file="../Public/js/upload.index.js" />
+</block>
