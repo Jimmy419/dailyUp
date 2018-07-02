@@ -6,7 +6,6 @@ $(function() {
         url:$("#getDateLink").val(),
         type:'get',
         success:function(result){
-            console.log(result);
             var data = result.data;
             var columns = result.tablecols;
             var table = result.table;
@@ -79,7 +78,6 @@ $(function() {
     }
 
     function subCharts(subtables,subtablecols,sourcedata){
-
         //get table dates;
         var tableDates = null;
         var tempDates = [];
