@@ -17,7 +17,7 @@ $(function() {
     })
 
     function drawCharts(table, columns, data){
-        $(".chart-box").append("<div class='col-sm-6' id='chart"+table.id+"'></div>");
+        $(".chart-box").append("<div class='col-12' id='chart"+table.id+"'></div>");
         var series = [];
         columns.forEach(function(col,colIndex){
             var itemData = [];
@@ -123,7 +123,7 @@ $(function() {
                 }
             })
 
-            $('.chart-box').append('<div class="col-sm-6" id="subtable'+subtable.id+'"></div>');
+            $('.chart-box').append('<div class="col-12" id="subtable'+subtable.id+'"></div>');
             Highcharts.chart('subtable'+subtable.id, {
                 chart: {
                     type: 'spline',

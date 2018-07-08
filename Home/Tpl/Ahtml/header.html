@@ -1,4 +1,5 @@
 <div class="frame_header a-d-flex">
+	<div class="logo">Daily Up</div>
 	<div class="a_dropdown">
 		<div class="a_dropdown_value">{$Think.session.utb.tablename}</div>
 		<ul class="a_dropdown_box">
@@ -9,9 +10,9 @@
 			</php>
 		</ul>
 	</div>
-	<div class="a-flex-stretch a-d-flex">
-		<div class="{$_SESSION['tabidx'] == 1?'active':''}"><a href="{:U('Index/index')}">图表</a></div>
-		<div class="{$_SESSION['tabidx'] == 2?'active':''}"><a href="{:U('Data/index')}">我的数据</a></div>
+	<div class="a-flex-stretch a-d-flex header_list">
+		<div class="list_item {$_SESSION['tabidx'] == 1?'active':''}"><a href="{:U('Index/index')}">图表</a></div>
+		<div class="list_item {$_SESSION['tabidx'] == 2?'active':''}"><a href="{:U('Data/index')}">我的数据</a></div>
 	    <!-- <div><a href="{:U('Columns/index')}">类目</a></div>
 	    <div><a href="{:U('Tables/index')}">我的表</a></div>
 	    <div><a href="{:U('Map/index')}">表映射</a></div>

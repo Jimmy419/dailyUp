@@ -14,25 +14,62 @@
   flex-direction: column;
   height: 100%; }
   .frame .frame_header {
+    z-index: 1;
     flex: 0 0 auto;
     background-color: #d04a02;
     display: flex;
-    min-height: 30px;
+    min-height: 40px;
     align-items: center; }
-    .frame .frame_header .active > a {
-      color: #FFFFFF; }
+    .frame .frame_header .a_dropdown .a_dropdown_value {
+      color: #FFFFFF;
+      height: 40px;
+      line-height: 40px; }
+    .frame .frame_header .a_dropdown .a_dropdown_box {
+      background-color: #d04a02; }
+      .frame .frame_header .a_dropdown .a_dropdown_box .a_dropdown_list {
+        color: #FFFFFF;
+        height: 30px;
+        line-height: 30px;
+        padding: 0 10px;
+        border-top: 1px solid #FFFFFF; }
+        .frame .frame_header .a_dropdown .a_dropdown_box .a_dropdown_list:hover {
+          background-color: #d96928; }
+    .frame .frame_header .header_list .list_item {
+      padding: 0 10px;
+      line-height: 40px;
+      height: 40px; }
+      .frame .frame_header .header_list .list_item > a {
+        color: #FFFFFF; }
+      .frame .frame_header .header_list .list_item.active {
+        position: relative;
+        background-color: #b04000; }
     .frame .frame_header .logout_box {
       margin-right: 10px; }
     .frame .frame_header .settings_box {
       margin-right: 10px;
       color: #FFFFFF;
       cursor: pointer; }
+      .frame .frame_header .settings_box .dropdown-toggle {
+        background: transparent;
+        color: #FFFFFF;
+        height: 40px;
+        cursor: pointer; }
       .frame .frame_header .settings_box .dropdown-menu {
+        background-color: #d04a02;
         right: 0;
-        padding: 10px;
+        padding: 10px 0;
         left: auto; }
         .frame .frame_header .settings_box .dropdown-menu > a {
-          display: block; }
+          display: block;
+          color: #FFFFFF;
+          white-space: nowrap;
+          font-size: 14px;
+          padding: 0 10px;
+          height: 30px;
+          line-height: 30px; }
+          .frame .frame_header .settings_box .dropdown-menu > a:hover {
+            background-color: #d96928;
+            text-decoration: none; }
   .frame .frame_content {
     flex: 1 1 auto;
     overflow: auto;
@@ -41,8 +78,20 @@
     flex: 0 0 auto;
     display: flex;
     padding: 8px 20px;
-    line-height: 24px;
-    font-size: 14px;
+    font-size: 12px;
     flex-wrap: wrap;
     background: #282F34;
     color: #FFFFFF; }
+  .frame .logo {
+    height: 30px;
+    line-height: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -o-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    font-size: 14px;
+    font-style: italic;
+    padding: 0 10px; }

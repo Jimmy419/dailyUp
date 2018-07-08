@@ -13,15 +13,16 @@
     <div class="frame">
 		
 			<div class="frame_header a-d-flex">
+	<div class="logo">Daily Up</div>
 	<div class="a_dropdown">
 		<div class="a_dropdown_value"><?php echo ($_SESSION['utb']['tablename']); ?></div>
 		<ul class="a_dropdown_box">
 			<?php foreach ($_SESSION['utbs'] as $utb) { echo "<li class='a_dropdown_list' tid='".$utb[id]."'>$utb[tablename]</li>"; } ?>
 		</ul>
 	</div>
-	<div class="a-flex-stretch a-d-flex">
-		<div class="<?php echo ($_SESSION['tabidx'] == 1?'active':''); ?>"><a href="<?php echo U('Index/index');?>">图表</a></div>
-		<div class="<?php echo ($_SESSION['tabidx'] == 2?'active':''); ?>"><a href="<?php echo U('Data/index');?>">我的数据</a></div>
+	<div class="a-flex-stretch a-d-flex header_list">
+		<div class="list_item <?php echo ($_SESSION['tabidx'] == 1?'active':''); ?>"><a href="<?php echo U('Index/index');?>">图表</a></div>
+		<div class="list_item <?php echo ($_SESSION['tabidx'] == 2?'active':''); ?>"><a href="<?php echo U('Data/index');?>">我的数据</a></div>
 	    <!-- <div><a href="<?php echo U('Columns/index');?>">类目</a></div>
 	    <div><a href="<?php echo U('Tables/index');?>">我的表</a></div>
 	    <div><a href="<?php echo U('Map/index');?>">表映射</a></div>
