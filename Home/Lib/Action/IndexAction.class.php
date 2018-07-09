@@ -2,6 +2,7 @@
 // 本类由系统自动生成，仅供测试用途
 class IndexAction extends CommonAction {
     public function index(){
+        $_SESSION['tabidx'] = 1;
 		$this->display();
     }
 
@@ -17,7 +18,8 @@ class IndexAction extends CommonAction {
         $data['data'] = $tables;
         $data['subcolumns'] = $subtables;
         $data['status']  = 1;
-        $data['subtbs'] = $subtbs->where('tid='.$_SESSION['utb'][id])->select();
+        $stbcols = M("stbcols");
+        $data['subtbs'] = $stbcols->field('subtbs.*')->join(array('INNER JOIN subtbs ON stbcols.stid = subtbs.id'))->where('subtbs.tid='.$_SESSION['utb'][id])->group('id')->select();
         $this->ajaxReturn($data);  
     }
 }
