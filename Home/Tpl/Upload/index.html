@@ -8,8 +8,8 @@
             </volist>
         </select>
         <label class="form-label">上传Excel文件</label>
-        <input type="file" name="file" id="upfile">
-        <button class="button btn-primary form-control" type="submit" style="margin-top:20px;">Submit</button>
+        <input class="form-control" type="file" name="file" id="upfile">
+        <button class="button btn-primary form-control" type="submit">Submit</button>
     </form>
     <input type="hidden" id="userId" value="{$Think.session.uid}">
     <input type="hidden" id="uploadLink" value="{:U('upload')}">

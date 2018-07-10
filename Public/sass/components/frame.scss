@@ -114,6 +114,16 @@
         flex: 1 1 auto;
         overflow: auto;
         padding: 20px;
+
+        .section-title {
+            margin-bottom: 10px;
+        }
+
+        form {
+            .form-control {
+                margin-bottom: 15px;
+            }
+        }
     }
 
     .frame_footer {

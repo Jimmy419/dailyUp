@@ -1,7 +1,11 @@
 <extend name="Public:basic" />
 <block name="content">
-    <div>我的Mapping表</div>
-    <div><a href="{:U('add')}" class="left-font01">添加Mapping</a></div>
+    <div class="a-d-flex section-title">
+        <div class="a-flex-stretch">我的Mapping表</div>
+        <div class="a-flex-auto"><a href="{:U('add')}" class="left-font01">
+            <i class="fa fa-plus-circle"></i> 添加Mapping</a>
+        </div>        
+    </div>
     <table class="table table-bordered table-hover">
         <thead>
             <th>id</th>

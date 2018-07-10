@@ -13,7 +13,7 @@
 			<form role="form" onsubmit="return false" id="loginForm">
 			  <div class="form-group">
 			    <label>Username</label>
-			    <input type="text" class="form-control" id="loginName" placeholder="请输入名称">
+			    <input type="text" class="form-control" id="loginName" placeholder="Please input username">
 			  </div>
 			  <div class="form-group">
 			    <label >Password</label>
