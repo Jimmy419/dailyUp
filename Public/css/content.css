@@ -254,3 +254,16 @@ h6 {
     display: block; }
   .a_dropdown.a_open .a_dropdown_box {
     display: block; }
+
+.btn-primary {
+  background-color: #d04a02;
+  border-color: #d04a02; }
+  .btn-primary:hover {
+    background-color: #d96928;
+    border-color: #d96928; }
+  .btn-primary:active {
+    background-color: #b04000;
+    border-color: #b04000; }
+  .btn-primary:focus {
+    box-shadow: none;
+    border-color: #d04a02; }

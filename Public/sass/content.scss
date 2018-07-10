@@ -342,3 +342,23 @@ h6 {
         }        
     }
 }
+
+.btn-primary{
+    background-color: $default-color;
+    border-color: $default-color;
+
+    &:hover{
+        background-color: $primary-btn-hover;
+        border-color: $primary-btn-hover;
+    }
+
+    &:active{
+        background-color: $primary-btn-active;
+        border-color: $primary-btn-active;
+    }
+
+    &:focus{
+        box-shadow: none;
+        border-color: $default-color;
+    }
+}

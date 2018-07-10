@@ -17,15 +17,24 @@ class TablesAction extends CommonAction {
         $cols->create();
         $_POST[uid]=$_SESSION['uid'];
         $cols->uid=$_SESSION['uid'];
-        if($rst = $cols->where($_POST)->find()){
-            $this->error('不能重复插入！', U('index'));
-        }else{
-            if($cols->add()){
-                $this->success('添加成功', U('index'));
+        if($_POST['tablename']){
+            if($rst = $cols->where($_POST)->find()){
+                $data['status']  = 0;
+                $data['errMsg'] = "Cannot insert duplicated items!";
             }else{
-                $this->error('插入失败', U('index'));
-            }
+                if($cols->add()){
+                    $data['status']  = 1;
+                    $data['errMsg'] = "Insert successfully";
+                }else{
+                    $data['status']  = 0;
+                    $data['errMsg'] = "Insert failed!";
+                }
+            }            
+        }else{
+            $data['status']  = 0;
+            $data['errMsg'] = "Cannot insert empty value!";
         }
+        $this->ajaxReturn($data);
     }     
 
     public function edit(){
@@ -39,7 +48,7 @@ class TablesAction extends CommonAction {
         $utbs=M('utbs');
         if($rst = $utbs->where('tablename="'.$_POST['tablename'].'" AND uid='.$_SESSION['uid'])->find()){
             $data['status']  = 0;
-            $data['errMsg'] = "字段已存在！";
+            $data['errMsg'] = "Cannot insert duplicated items!";
             $this->ajaxReturn($data);  
         }else{
             if($utbs->where('id='.$_POST[id])->save($data)){
