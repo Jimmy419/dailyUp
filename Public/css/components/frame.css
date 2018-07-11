@@ -76,8 +76,10 @@
     padding: 20px; }
     .frame .frame_content .section-title {
       margin-bottom: 10px; }
-    .frame .frame_content form .form-control {
-      margin-bottom: 15px; }
+    .frame .frame_content form {
+      margin-top: 20px; }
+      .frame .frame_content form .form-control {
+        margin-bottom: 15px; }
   .frame .frame_footer {
     flex: 0 0 auto;
     display: flex;

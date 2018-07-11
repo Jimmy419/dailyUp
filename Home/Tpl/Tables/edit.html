@@ -1,5 +1,6 @@
 <extend name="Public:basic" />
 <block name="content">
+	<div><a href="{:U('index')}">&lt;&lt;Back</a></div>
     <form id="tableUpdate" action="{:U('update')}" onsubmit="return false" method='post'>
         <label class="form-label">Name</label>
         <input class="form-control" id="tableName" value="{$col[tablename]}" name="tablename" />

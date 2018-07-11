@@ -16,20 +16,26 @@ class SubtableAction extends CommonAction {
     public function insert(){
         $subtbs=M('subtbs');
         $subtbs->create();
-        if($rst = $subtbs->where($_POST)->find()){
-            $data['status']  = 0;
-            $data['errMsg'] = "Duplicated item!";
-            $this->ajaxReturn($data); 
-        }else{
-            if($subtbs->add()){
-                $data['status']  = 1;
-                $data['errMsg'] = "Data insert successfully!";
-                $this->ajaxReturn($data);
-            }else{
+        if($_POST[name]){
+            if($rst = $subtbs->where($_POST)->find()){
                 $data['status']  = 0;
-                $data['errMsg'] = "Insert failed!";
-                $this->ajaxReturn($data);
-            }
+                $data['errMsg'] = "Duplicated item!";
+                $this->ajaxReturn($data); 
+            }else{
+                if($subtbs->add()){
+                    $data['status']  = 1;
+                    $data['errMsg'] = "Data insert successfully!";
+                    $this->ajaxReturn($data);
+                }else{
+                    $data['status']  = 0;
+                    $data['errMsg'] = "Insert failed!";
+                    $this->ajaxReturn($data);
+                }
+            }            
+        }else{
+            $data['status']  = 0;
+            $data['errMsg'] = "Cannot insert empty value!";
+            $this->ajaxReturn($data);
         }
     }     
 
@@ -43,20 +49,26 @@ class SubtableAction extends CommonAction {
     
     public function update(){
         $subtbs=M('subtbs');
-        if($rst = $subtbs->where('tid='.$_POST['tid'].' AND name="'.$_POST['name'].'"')->find()){
-            $data['status']  = 0;
-            $data['errMsg'] = "Duplicated items!";
-            $this->ajaxReturn($data);  
-        }else{
-            if($subtbs->where('id='.$_POST[id])->save($_POST)){
-                $data['status']  = 1;
-                $data['errMsg'] = "Data update successfully!";
-                $this->ajaxReturn($data);
-            }else{
+        if($_POST['name']){
+            if($rst = $subtbs->where('tid='.$_POST['tid'].' AND name="'.$_POST['name'].'"')->find()){
                 $data['status']  = 0;
-                $data['errMsg'] = "update failed!";
+                $data['errMsg'] = "Duplicated items!";
                 $this->ajaxReturn($data);  
-            }
+            }else{
+                if($subtbs->where('id='.$_POST[id])->save($_POST)){
+                    $data['status']  = 1;
+                    $data['errMsg'] = "Data update successfully!";
+                    $this->ajaxReturn($data);
+                }else{
+                    $data['status']  = 0;
+                    $data['errMsg'] = "update failed!";
+                    $this->ajaxReturn($data);  
+                }
+            }            
+        }else{
+            $data['status']  = 0;
+            $data['errMsg'] = "Cannot insert empty value!";
+            $this->ajaxReturn($data);  
         }
     }
 

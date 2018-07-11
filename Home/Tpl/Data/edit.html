@@ -1,5 +1,6 @@
 <extend name="Public:basic" />
 <block name="content">
+    <div><a href="{:U('Data/index')}">&lt;&lt;Back</a></div>
     <form id="updateDataForm" onsubmit="return false" action="{:U('update')}" method="post">
         <label class="form-label">编辑column</label>
         <div class="form-control">{$column.mclass}-({$column.name})</div>
