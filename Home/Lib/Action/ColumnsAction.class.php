@@ -69,9 +69,13 @@ class ColumnsAction extends CommonAction {
         $id=$_GET[id];
         $cols=M('columns');
         if($cols->delete($id)){
-            $this->success('删除成功', U('index'));
+            $data['status']  = 1;
+            $data['errMsg'] = "Data delete successfully!";
+            $this->ajaxReturn($data);
         }else{
-            $this->error('删除失败', U('index'));
+            $data['status']  = 0;
+            $data['errMsg'] = "Data delete failed!";
+            $this->ajaxReturn($data);
         }
     }
 }
